@@ -1,6 +1,3 @@
-# Ignore API key file
-tmdb_API.json
-
 # Byte-compiled / optimized / DLL files
 
 __pycache__/
