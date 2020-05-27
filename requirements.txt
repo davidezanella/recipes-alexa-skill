@@ -1,3 +1,5 @@
 rasa==1.10.1
 peewee==3.13.3
 tqdm==4.46.0
+requests==2.23.0
+beautifulsoup4==4.9.1
