@@ -59,7 +59,8 @@ class ActionGetRecipeInfo(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
-        dispatcher.utter_message(text="This is the description for the '{}'".format(recipes[chosen_recipe].name))
+        dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
+            recipes[chosen_recipe].name, recipes[chosen_recipe].preparation_minutes))
         dispatcher.utter_message(text=recipes[chosen_recipe].description)
 
         return []
