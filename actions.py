@@ -33,6 +33,7 @@ class ActionSearchRecipe(Action):
             for i, recipe in enumerate(recipes):
                 dispatcher.utter_message(text="{}° recipe: '{}'".format(i+1, recipe.name))
 
+        recipes = list(map(lambda x: x.to_dict(), recipes))
         return [SlotSet("recipes", recipes)]
 
 
@@ -45,7 +46,7 @@ class ActionChooseRecipe(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
-        dispatcher.utter_message(text="Ok so you want the '{}'".format(recipes[chosen_recipe].name))
+        dispatcher.utter_message(text="Ok so you want the '{}'".format(recipes[chosen_recipe]['name']))
 
         return []
 
@@ -60,8 +61,8 @@ class ActionGetRecipeInfo(Action):
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
         dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
-            recipes[chosen_recipe].name, recipes[chosen_recipe].preparation_minutes))
-        dispatcher.utter_message(text=recipes[chosen_recipe].description)
+            recipes[chosen_recipe]['name'], recipes[chosen_recipe]['preparation_minutes']))
+        dispatcher.utter_message(text=recipes[chosen_recipe]['description'])
 
         return []
 
@@ -75,13 +76,14 @@ class ActionGetRecipeNutrition(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
-        dispatcher.utter_message(text="This is the nutrition info for the '{}'".format(recipes[chosen_recipe].name))
+        dispatcher.utter_message(text="This is the nutrition info for the '{}'".format(recipes[chosen_recipe]['name']))
         dispatcher.utter_message(text="Calories: {}, total fat percentage: {} %, sugar percentage: {} %,"
                                       "sodium percentage: {} %, protein percentage: {} %,"
                                       "saturated fat percentage: {} %, total carbohydrate percentage: {} %".format(
-            recipes[chosen_recipe].calories, recipes[chosen_recipe].total_fat_perc, recipes[chosen_recipe].sugar_perc,
-            recipes[chosen_recipe].sodium_perc, recipes[chosen_recipe].protein_perc,
-            recipes[chosen_recipe].saturated_fat_perc, recipes[chosen_recipe].total_carbohydrate_perc))
+            recipes[chosen_recipe]['calories'], recipes[chosen_recipe]['total_fat_perc'],
+            recipes[chosen_recipe]['sugar_perc'],recipes[chosen_recipe]['sodium_perc'],
+            recipes[chosen_recipe]['protein_perc'], recipes[chosen_recipe]['saturated_fat_perc'],
+            recipes[chosen_recipe]['total_carbohydrate_perc']))
 
         return []
 
@@ -95,8 +97,8 @@ class ActionGetRecipeSteps(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
-        dispatcher.utter_message(text="This is the steps for the '{}'".format(recipes[chosen_recipe].name))
-        for step in Step.select().where(Step.recipe == recipes[chosen_recipe]).order_by(Step.index):
+        dispatcher.utter_message(text="This is the steps for the '{}'".format(recipes[chosen_recipe]['name']))
+        for step in Step.select().where(Step.recipe == recipes[chosen_recipe]['id']).order_by(Step.index):
             dispatcher.utter_message(text=step.text)
 
         return []
@@ -112,7 +114,7 @@ class ActionStartCooking(Action):
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
         dispatcher.utter_message(text="Ok let's start doing the '{}'. "
-                                      "Tell me when you're ready.".format(recipes[chosen_recipe].name))
+                                      "Tell me when you're ready.".format(recipes[chosen_recipe]['name']))
 
         return [SlotSet("step_index", 0)]
 
@@ -127,11 +129,11 @@ class ActionNextStep(Action):
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
         step_index = tracker.get_slot("step_index")
-        steps = Step.select().where(Step.recipe == recipes[chosen_recipe] & Step.index == step_index)
+        steps = Step.select().where(Step.recipe == recipes[chosen_recipe]['id'] & Step.index == step_index)
         if len(steps) > 0:
             dispatcher.utter_message(text=steps[0].text)
             step_index += 1
         else:
-            dispatcher.utter_message(text="You've done! I hopes it tastes good.")
+            dispatcher.utter_message(text="You've done! I hope it tastes good.")
             step_index = None
         return [SlotSet("step_index", step_index)]

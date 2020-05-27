@@ -1,31 +1,27 @@
-## happy path
+## greet
 * greet
   - utter_greet
-* mood_great
-  - utter_happy
-
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
 
 ## say goodbye
 * goodbye
   - utter_goodbye
 
-## bot challenge
-* bot_challenge
-  - utter_iamabot
+## 1
+* search_recipe{"gluten_free": "celiac"}
+  - slot{"gluten_free": true}
+  - action_search_recipe
+* choose_recipe{"chosen_recipe": "first"}
+  - slot{"chosen_recipe": 0}
+  - action_choose_recipe
+* get_recipe_info
+  - action_get_recipe_info
+* start_cooking
+  - action_start_cooking
+* next_step
+  - action_next_step
+* next_step
+  - action_next_step
+* next_step
+  - action_next_step
+* next_step
+  - action_next_step

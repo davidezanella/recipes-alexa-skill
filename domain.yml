@@ -42,7 +42,7 @@ intents:
   - search_recipe
   - choose_recipe
   - get_recipe_info
-  - get_recipe_nutritions
+  - get_recipe_nutrition
   - get_recipe_steps
   - start_cooking
   - next_step
