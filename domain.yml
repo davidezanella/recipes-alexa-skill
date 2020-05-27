@@ -1,32 +1,67 @@
+slots:
+  search_text:
+    type: text
+  max_minutes:
+    type: float
+    min_value: 0.0
+  gluten_free:
+    type: bool
+  vegetarian:
+    type: bool
+  vegan:
+    type: bool
+  max_calories:
+    type: float
+  search_ingredients:
+    type: list
+  avoid_ingredients:
+    type: list
+  chosen_recipe:
+    type: float
+  page:
+    type: unfeaturized
+    initial_value: 1
+  recipes:
+    type: unfeaturized
+  step_index:
+    type: unfeaturized
+
+entities:
+  - search_text
+  - max_minutes
+  - gluten_free
+  - vegetarian
+  - vegan
+  - max_calories
+  - search_ingredients
+  - avoid_ingredients
+
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - search_recipe
+  - choose_recipe
+  - get_recipe_info
+  - get_recipe_nutritions
+  - get_recipe_steps
+  - start_cooking
+  - next_step
+
+actions:
+  - action_search_recipe
+  - action_choose_recipe
+  - action_get_recipe_info
+  - action_get_recipe_nutrition
+  - action_get_recipe_steps
+  - action_start_cooking
+  - action_next_step
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
   utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: See you soon.
+  utter_greet:
+  - text: Hey! I'm the recipes bot. How can I help you?
 
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  session_expiration_time: 60
