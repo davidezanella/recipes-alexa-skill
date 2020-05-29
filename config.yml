@@ -3,6 +3,9 @@
 language: en
 pipeline:
   - name: WhitespaceTokenizer
+  - name: DucklingHTTPExtractor
+    url: "http://localhost:9900"
+    dimensions: ["number", "ordinal"]
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -24,3 +27,4 @@ policies:
     max_history: 5
     epochs: 100
   - name: MappingPolicy
+  - name: FormPolicy

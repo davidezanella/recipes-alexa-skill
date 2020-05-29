@@ -1,0 +1,6 @@
+version: "3"
+services:
+  duckling:
+    image: rasa/duckling # latest tested: 0.1.6.3
+    ports:
+      - "9900:8000"

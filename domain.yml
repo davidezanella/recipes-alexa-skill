@@ -1,22 +1,37 @@
 slots:
   search_text:
-    type: text
+    type: unfeaturized
+    auto_fill: false
   max_minutes:
-    type: float
-    min_value: 0.0
+    type: unfeaturized
+    auto_fill: false
   gluten_free:
     type: bool
+    auto_fill: false
+    initial_value: false
   vegetarian:
     type: bool
+    auto_fill: false
+    initial_value: false
   vegan:
     type: bool
+    auto_fill: false
+    initial_value: false
   max_calories:
-    type: float
+    type: unfeaturized
+    auto_fill: false
   search_ingredients:
-    type: list
+    type: unfeaturized
+    auto_fill: false
   avoid_ingredients:
-    type: list
+    type: unfeaturized
+    auto_fill: false
   chosen_recipe:
+    type: unfeaturized
+    auto_fill: false
+  number:
+    type: float
+  ordinal:
     type: float
   page:
     type: unfeaturized
@@ -35,6 +50,9 @@ entities:
   - max_calories
   - search_ingredients
   - avoid_ingredients
+  - chosen_recipe
+  - number
+  - ordinal
 
 intents:
   - greet
@@ -48,19 +66,24 @@ intents:
   - next_step
 
 actions:
-  - action_search_recipe
-  - action_choose_recipe
   - action_get_recipe_info
   - action_get_recipe_nutrition
   - action_get_recipe_steps
   - action_start_cooking
   - action_next_step
+  - action_choose_recipe
+
+forms:
+  - action_form_search_recipe
 
 responses:
   utter_goodbye:
-  - text: See you soon.
+    - text: See you soon.
   utter_greet:
-  - text: Hey! I'm the recipes bot. How can I help you?
+    - text: Hey! I'm the recipes bot. How can I help you?
+  utter_rephrase:
+  - text: Can you please rephrase?
+  - text: Sorry, I didn't get that. Can you rephrase?
 
 session_config:
   carry_over_slots_to_new_session: true

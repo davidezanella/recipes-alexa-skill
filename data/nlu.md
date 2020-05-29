@@ -18,10 +18,12 @@
 - I would like to prepare a [dessert](search_text)
 - I have [30](max_minutes) minutes what can I prepare?
 - I have only [40](max_minutes) minutes what can I cook?
-- What can you suggest me to cook for [celiac](gluten_free)?
-- What can you suggest me to prepare [without gluten](gluten_free)?
-- What can I cook [gluten-free](gluten_free)?
-- What can I prepare [gluten free](gluten_free)?
+- I am looking for [gluten free]{"entity": "gluten_free", "value": "true"} recipe"
+- Tell me some recipe for a dish [without gluten]{"entity": "gluten_free", "value": "true"}
+- What can you suggest me to cook for [celiac]{"entity": "gluten_free", "value": "true"}?
+- What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
+- What can I cook [gluten-free]{"entity": "gluten_free", "value": "true"}?
+- What can I prepare [gluten free]{"entity": "gluten_free", "value": "true"}?
 - What can you suggest me to cook for [vegetarian](vegetarian)?
 - What can you suggest me to cook for [vegan](vegan)?
 - I want to cook something with maximum [200](max_calories) calories
@@ -32,8 +34,15 @@
 - I don't want [eggs](avoid_ingredients) and [chicken](avoid_ingredients)
 
 ## intent:choose_recipe
-- I want to cook the [first](chosen_recipe) one
-- I like the [second](chosen_recipe) recipe
+- I want to cook the first one
+- I like the first recipe
+- I like the second recipe
+- I like the second one
+- the first one
+- the second one
+- the third one
+- the last one
+- the first recipe
 
 ## intent:get_recipe_info
 - Tell me the details
@@ -47,6 +56,7 @@
 - What about the nutrition info of the [second](chosen_recipe) recipe?
 - Talk about the nutrition
 - What are the nutrition values?
+- Tell me its nutrition
 
 ## intent:get_recipe_steps
 - Can you explain to me the steps

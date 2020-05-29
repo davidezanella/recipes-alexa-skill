@@ -47,7 +47,7 @@ class Recipe(BaseModel):
             'protein_perc': self.protein_perc,
             'saturated_fat_perc': self.saturated_fat_perc,
             'total_carbohydrate_perc': self.saturated_fat_perc,
-            'description': self.saturated_fat_perc
+            'description': self.description
         }
 
 

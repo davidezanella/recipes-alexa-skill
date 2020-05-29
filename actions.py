@@ -4,34 +4,110 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/core/actions/#custom-actions/
 
-from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict, List, Union
 
 from rasa_sdk import Action, Tracker
+from rasa_sdk.forms import FormAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
 from recipes_db.models import Step
 from recipes_db.db_functions import search_recipes
 
+from utils import string_to_bool
 
-class ActionSearchRecipe(Action):
+
+class ActionFormSearchRecipe(FormAction):
     def name(self) -> Text:
-        return "action_search_recipe"
+        return "action_form_search_recipe"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    entities = ["page", "search_text", "max_minutes", "gluten_free", "vegetarian", "vegan", "max_calories",
+                "search_ingredients", "avoid_ingredients"]
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        for ent in ActionFormSearchRecipe.entities[1:]:
+            if tracker.get_slot(ent) is not None:
+                return [ent]
+        return ActionFormSearchRecipe.entities
+
+    # TODO: add intents
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return {
+            "page": self.from_entity(entity="page"),
+            "search_text": self.from_entity(entity="search_text"),
+            "max_minutes": self.from_entity(entity="max_minutes"),
+            "gluten_free": self.from_entity(entity="gluten_free"),
+            "vegetarian": self.from_entity(entity="vegetarian"),
+            "vegan": self.from_entity(entity="vegan"),
+            "max_calories": self.from_entity(entity="max_calories"),
+            "search_ingredients": self.from_entity(entity="search_ingredients"),
+            "avoid_ingredients": self.from_entity(entity="avoid_ingredients"),
+        }
+
+    def validate_page(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                      domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"page": value}
+
+    def validate_search_text(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                             domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if value is None:
+            value = ""
+        return {"search_text": value}
+
+    def validate_max_minutes(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                             domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"max_minutes": value}
+
+    def validate_gluten_free(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                             domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"gluten_free": string_to_bool(value)}
+
+    def validate_vegetarian(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                            domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"vegetarian": value}
+
+    def validate_vegan(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                       domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"vegan": value}
+
+    def validate_max_calories(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                              domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        return {"max_calories": value}
+
+    def validate_search_ingredients(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                                    domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if not isinstance(value, list):
+            value = [value]
+        return {"search_ingredients": value}
+
+    def validate_avoid_ingredients(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
+                                   domain: Dict[Text, Any]) -> Dict[Text, Any]:
+        if not isinstance(value, list):
+            value = [value]
+        return {"avoid_ingredients": value}
+
+    def submit(self, dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]) -> List[Dict]:
         recipes = search_recipes(page=tracker.get_slot("page"), name=tracker.get_slot("search_text"),
-                                 max_minutes=tracker.get_slot("max_minutes"), gluten_free=tracker.get_slot("gluten_free"),
+                                 max_minutes=tracker.get_slot("max_minutes"),
+                                 gluten_free=tracker.get_slot("gluten_free"),
                                  vegetarian=tracker.get_slot("vegetarian"), vegan=tracker.get_slot("vegan"),
                                  max_calories=tracker.get_slot("max_calories"),
                                  search_ingredients=tracker.get_slot("search_ingredients"),
                                  avoid_ingredients=tracker.get_slot("avoid_ingredients"))
+
+        print(ActionFormSearchRecipe.required_slots(tracker))
+        for ent in ActionFormSearchRecipe.entities:
+            print(ent, tracker.get_slot(ent))
+        print("-" * 15)
+
         if len(recipes) == 0:
             dispatcher.utter_message(text="No recipes found with this filters!")
         else:
             for i, recipe in enumerate(recipes):
-                dispatcher.utter_message(text="{}° recipe: '{}'".format(i+1, recipe.name))
+                dispatcher.utter_message(text="{}° recipe: '{}'".format(i + 1, recipe.name))
 
         recipes = list(map(lambda x: x.to_dict(), recipes))
         return [SlotSet("recipes", recipes)]
@@ -41,14 +117,28 @@ class ActionChooseRecipe(Action):
     def name(self) -> Text:
         return "action_choose_recipe"
 
+    possible_slots = ['ordinal', 'number']
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            domain: Dict[Text, Any]) -> List[Dict]:
         recipes = tracker.get_slot("recipes")
-        chosen_recipe = tracker.get_slot("chosen_recipe")
-        dispatcher.utter_message(text="Ok so you want the '{}'".format(recipes[chosen_recipe]['name']))
 
-        return []
+        chosen_recipe = None
+        for slot in self.possible_slots:
+            v = tracker.get_slot(slot)
+            if v is not None:
+                chosen_recipe = v
+                break
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
+        chosen_recipe = chosen_recipe - 1
+        dispatcher.utter_message(text="Ok so you are interested in the '{}'".format(recipes[chosen_recipe]['name']))
+
+        return [SlotSet("chosen_recipe", chosen_recipe)]
 
 
 class ActionGetRecipeInfo(Action):
@@ -81,7 +171,7 @@ class ActionGetRecipeNutrition(Action):
                                       "sodium percentage: {} %, protein percentage: {} %,"
                                       "saturated fat percentage: {} %, total carbohydrate percentage: {} %".format(
             recipes[chosen_recipe]['calories'], recipes[chosen_recipe]['total_fat_perc'],
-            recipes[chosen_recipe]['sugar_perc'],recipes[chosen_recipe]['sodium_perc'],
+            recipes[chosen_recipe]['sugar_perc'], recipes[chosen_recipe]['sodium_perc'],
             recipes[chosen_recipe]['protein_perc'], recipes[chosen_recipe]['saturated_fat_perc'],
             recipes[chosen_recipe]['total_carbohydrate_perc']))
 
@@ -129,7 +219,7 @@ class ActionNextStep(Action):
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
         step_index = tracker.get_slot("step_index")
-        steps = Step.select().where(Step.recipe == recipes[chosen_recipe]['id'] & Step.index == step_index)
+        steps = Step.select().where((Step.recipe == recipes[chosen_recipe]['id']) & (Step.index == step_index))
         if len(steps) > 0:
             dispatcher.utter_message(text=steps[0].text)
             step_index += 1
