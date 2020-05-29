@@ -24,8 +24,8 @@
 - What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
 - What can I cook [gluten-free]{"entity": "gluten_free", "value": "true"}?
 - What can I prepare [gluten free]{"entity": "gluten_free", "value": "true"}?
-- What can you suggest me to cook for [vegetarian](vegetarian)?
-- What can you suggest me to cook for [vegan](vegan)?
+- What can you suggest me to cook for [vegetarian]{"entity": "vegetarian", "value": "true"}?
+- What can you suggest me to cook for [vegan]{"entity": "vegan", "value": "true"}?
 - I want to cook something with maximum [200](max_calories) calories
 - What can I cook with only [100](max_calories) calories?
 - I want something without [peppers](avoid_ingredients)
@@ -48,12 +48,12 @@
 - Tell me the details
 - Explain it better
 - Describe it
-- Tell me about the [first](chosen_recipe) one
-- Describe the [second](chosen_recipe) recipe
+- Tell me about the first one
+- Describe the second recipe
 
 ## intent:get_recipe_nutrition
-- Tell me the nutrition info of the [first](chosen_recipe) one
-- What about the nutrition info of the [second](chosen_recipe) recipe?
+- Tell me the nutrition info of the first one
+- What about the nutrition info of the second recipe?
 - Talk about the nutrition
 - What are the nutrition values?
 - Tell me its nutrition
@@ -76,10 +76,10 @@
 - OK go on
 - I'm ready
 - I decided to make it
-- I decided to prepare the [second](chosen_recipe) recipe
-- I want to do the [first](chosen_recipe) one
-- I want to do the [first](chosen_recipe) recipe
-- I want to cook the [first](chosen_recipe) of the list
+- I decided to prepare the second recipe
+- I want to do the first one
+- I want to do the first recipe
+- I want to cook the first of the list
 
 ## intent:next_step
 - I've done

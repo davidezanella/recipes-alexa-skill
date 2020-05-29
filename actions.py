@@ -21,14 +21,17 @@ class ActionFormSearchRecipe(FormAction):
     def name(self) -> Text:
         return "action_form_search_recipe"
 
-    entities = ["page", "search_text", "max_minutes", "gluten_free", "vegetarian", "vegan", "max_calories",
+    entities = ["page", "gluten_free", "vegetarian", "vegan", "search_text", "max_minutes", "max_calories",
                 "search_ingredients", "avoid_ingredients"]
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        for ent in ActionFormSearchRecipe.entities[1:]:
+        entities = ActionFormSearchRecipe.entities[:4]
+        for ent in ActionFormSearchRecipe.entities[4:]:
             if tracker.get_slot(ent) is not None:
-                return [ent]
+                entities.append(ent)
+        if len(entities) > 0:
+            return entities
         return ActionFormSearchRecipe.entities
 
     # TODO: add intents
@@ -65,11 +68,11 @@ class ActionFormSearchRecipe(FormAction):
 
     def validate_vegetarian(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                             domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        return {"vegetarian": value}
+        return {"vegetarian": string_to_bool(value)}
 
     def validate_vegan(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        return {"vegan": value}
+        return {"vegan": string_to_bool(value)}
 
     def validate_max_calories(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                               domain: Dict[Text, Any]) -> Dict[Text, Any]:
