@@ -67,12 +67,27 @@
 - I don't have any [eggs](avoid_ingredients)
 - I don't like [eggs](avoid_ingredients)
 - I don't want [eggs](avoid_ingredients) and [chicken](avoid_ingredients)
+- what can i cook without [eggs](avoid_ingredients)?
+- what can i cook without using [lemons](avoid_ingredients)?
+- what can i cook without using [carrots](avoid_ingredients) and [potatoes](avoid_ingredients)?
+- find a recipe without [cucumber](avoid_ingredients)
 
 - what can i cook in [60](max_minutes) minutes and maximum [200](max_calories) calories
 - what can i cook in [60](max_minutes) minutes with [200](max_calories) calories
 - i need a recipe ready in [70](max_minutes) minutes with maximum [140](max_calories) calories
 - i need some recipes ready in [30](max_minutes) minutes and maximum [20](max_calories) calories
 - i want a recipe with maximum [300](max_calories) calories but i have only [25](max_minutes) minutes
+
+- find a recipe for a [dessert](search_text) with [strawberries](search_ingredients)
+- find a recipe for a [cake](search_text) where i can use [raspberries](search_ingredients)
+
+- find a recipe for a [dessert](search_text) without [strawberries](avoid_ingredients)
+
+- find a recipe [without gluten]{"entity": "gluten_free", "value": "true"} where i can use [salad](search_ingredients)
+
+- find a recipe for [vegetarians]{"entity": "vegetarian", "value": "true"} where i can use [salad](search_ingredients)
+
+- find a recipe for [vegan]{"entity": "vegan", "value": "true"} where i can use [salad](search_ingredients)
 
 ## intent:choose_recipe
 - I want to cook the first one

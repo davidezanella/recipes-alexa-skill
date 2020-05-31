@@ -6,6 +6,13 @@
 * goodbye
   - utter_goodbye
 
+## base: search text
+* search_recipe{"search_text": "sacher"}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"search_text": "sacher"}
+  - form{"name": null}
+
 ## base: gluten free
 * search_recipe{"gluten_free": true}
   - action_form_search_recipe
