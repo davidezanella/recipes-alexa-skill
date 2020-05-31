@@ -190,7 +190,7 @@ class ActionChooseRecipe(Action):
                 break
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         chosen_recipe = chosen_recipe - 1
@@ -208,7 +208,7 @@ class ActionGetRecipeInfo(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
@@ -229,7 +229,7 @@ class ActionGetRecipeIngredients(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         dispatcher.utter_message(text="To make the '{}' you will need:".format(
@@ -254,7 +254,7 @@ class ActionGetRecipeNutrition(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         dispatcher.utter_message(text="This is the nutrition info for the '{}'".format(recipes[chosen_recipe]['name']))
@@ -280,7 +280,7 @@ class ActionGetRecipeSteps(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         dispatcher.utter_message(text="This is the steps for the '{}'".format(recipes[chosen_recipe]['name']))
@@ -301,7 +301,7 @@ class ActionStartCooking(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         dispatcher.utter_message(text="Ok let's start doing the '{}'. "
@@ -321,7 +321,7 @@ class ActionNextStep(Action):
         chosen_recipe = tracker.get_slot("chosen_recipe")
 
         if chosen_recipe is None:
-            dispatcher.utter_template("utter_rephrase", tracker)
+            dispatcher.utter_message("utter_rephrase", tracker)
             return []
 
         step_index = tracker.get_slot("step_index")
