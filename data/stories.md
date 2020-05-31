@@ -184,6 +184,7 @@
 * choose_recipe{"ordinal": 1}
   - action_choose_recipe
   - slot{"chosen_recipe": 1}
+  - action_get_recipe_info
 * get_recipe_info
   - action_get_recipe_info
 * start_cooking
@@ -211,6 +212,7 @@
 * choose_recipe{"ordinal": 1}
   - action_choose_recipe
   - slot{"chosen_recipe": 1}
+  - action_get_recipe_info
 * get_recipe_ingredients
   - action_get_recipe_ingredients
 * choose_recipe{"ordinal": 2}
@@ -232,3 +234,20 @@
 * next_step
   - action_next_step
   - slot{"step_index": null}
+
+## next page
+* search_recipe{"search_text": "dessert"}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"search_text": "dessert"}
+  - form{"name": null}
+* next_page
+  - action_next_page
+  - slot{"page": 2}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - form{"name": null}
+* choose_recipe{"ordinal": 8}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 8}
+  - action_get_recipe_info

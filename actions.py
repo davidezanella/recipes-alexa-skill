@@ -74,13 +74,6 @@ class ActionFormSearchRecipe(FormAction):
             "avoid_ingredients": self.from_entity(entity="avoid_ingredients"),
         }
 
-    def reset_all_slots(self):
-        slots = [SlotSet('page', 1)]
-        for entity in self.entities[1:]:
-            slots.append(SlotSet(entity[0], None))
-            slots.append(SlotSet(entity[1], None))
-        return slots
-
     def validate_page(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                       domain: Dict[Text, Any]) -> Dict[Text, Any]:
         return {"page": value}
@@ -143,11 +136,41 @@ class ActionFormSearchRecipe(FormAction):
             dispatcher.utter_message(text="No recipes found with this filters!")
         else:
             for i, recipe in enumerate(recipes):
-                dispatcher.utter_message(text="{}° recipe: '{}'".format(i + 1, recipe.name))
+                idx = i + 1 + (params['page'] - 1) * 5
+                dispatcher.utter_message(text="{}° recipe: '{}'".format(idx, recipe.name))
 
-        recipes = list(map(lambda x: x.to_dict(), recipes))
-        slots = self.reset_all_slots()
-        return slots + [SlotSet("recipes", recipes)]
+        old_recipes = tracker.get_slot("recipes")
+        if old_recipes is None:
+            old_recipes = []
+        recipes = old_recipes + list(map(lambda x: x.to_dict(), recipes))
+        return [SlotSet("recipes", recipes)]
+
+
+class ActionNextPage(Action):
+    def name(self) -> Text:
+        return "action_next_page"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+        page = int(tracker.get_slot("page")) + 1
+
+        return [SlotSet("page", page)]
+
+
+class ActionClearSearch(Action):
+    def name(self) -> Text:
+        return "action_clear_search"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        slots = [SlotSet('page', 1), SlotSet('recipes', [])]
+        for entity in ActionFormSearchRecipe.entities[1:]:
+            slots.append(SlotSet(entity[0], None))
+            slots.append(SlotSet(entity[1], None))
+        return slots
 
 
 class ActionChooseRecipe(Action):

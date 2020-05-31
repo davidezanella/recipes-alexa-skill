@@ -1,83 +1,91 @@
+actions:
+- action_choose_recipe
+- action_clear_search
+- action_get_recipe_info
+- action_get_recipe_ingredients
+- action_get_recipe_nutrition
+- action_get_recipe_steps
+- action_next_page
+- action_next_step
+- action_start_cooking
+- utter_goodbye
+- utter_greet
+- utter_rephrase
+entities:
+- avoid_ingredients
+- chosen_recipe
+- gluten_free
+- max_calories
+- max_minutes
+- number
+- ordinal
+- search_ingredients
+- search_text
+- vegan
+- vegetarian
+forms:
+- action_form_search_recipe
+intents:
+- next_page
+- search_recipe
+- greet
+- goodbye
+- choose_recipe
+- get_recipe_info
+- get_recipe_ingredients
+- get_recipe_nutrition
+- get_recipe_steps
+- start_cooking
+- next_step
+responses:
+  utter_goodbye:
+  - text: See you soon.
+  utter_greet:
+  - text: Hey! I'm the recipes bot. How can I help you?
+  utter_rephrase:
+  - text: Can you please rephrase?
+  - text: Sorry, I didn't get that. Can you rephrase?
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
 slots:
-  search_text:
-    type: text
-  max_minutes:
-    type: float
-  gluten_free:
-    type: bool
-    initial_value: false
-  vegetarian:
-    type: bool
-    initial_value: false
-  vegan:
-    type: bool
-    initial_value: false
-  max_calories:
-    type: float
-  search_ingredients:
-    type: list
   avoid_ingredients:
     type: list
   chosen_recipe:
     type: unfeaturized
+  gluten_free:
+    initial_value: false
+    type: bool
+  max_calories:
+    max_value: 1.0
+    min_value: 0.0
+    type: float
+  max_minutes:
+    max_value: 1.0
+    min_value: 0.0
+    type: float
   number:
     type: list
   ordinal:
+    max_value: 1.0
+    min_value: 0.0
     type: float
   page:
-    type: unfeaturized
     initial_value: 1
+    type: unfeaturized
   recipes:
     type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  search_ingredients:
+    type: list
+  search_text:
+    type: text
   step_index:
     type: unfeaturized
-
-entities:
-  - search_text
-  - max_minutes
-  - gluten_free
-  - vegetarian
-  - vegan
-  - max_calories
-  - search_ingredients
-  - avoid_ingredients
-  - chosen_recipe
-  - number
-  - ordinal
-
-intents:
-  - greet
-  - goodbye
-  - search_recipe
-  - choose_recipe
-  - get_recipe_info
-  - get_recipe_ingredients
-  - get_recipe_nutrition
-  - get_recipe_steps
-  - start_cooking
-  - next_step
-
-actions:
-  - action_get_recipe_info
-  - action_get_recipe_ingredients
-  - action_get_recipe_nutrition
-  - action_get_recipe_steps
-  - action_start_cooking
-  - action_next_step
-  - action_choose_recipe
-
-forms:
-  - action_form_search_recipe
-
-responses:
-  utter_goodbye:
-    - text: See you soon.
-  utter_greet:
-    - text: Hey! I'm the recipes bot. How can I help you?
-  utter_rephrase:
-  - text: Can you please rephrase?
-  - text: Sorry, I didn't get that. Can you rephrase?
-
-session_config:
-  carry_over_slots_to_new_session: true
-  session_expiration_time: 60
+  vegan:
+    initial_value: false
+    type: bool
+  vegetarian:
+    initial_value: false
+    type: bool
