@@ -21,7 +21,7 @@ def search_recipes(max_minutes, gluten_free, vegetarian, vegan, max_calories,
 
     if avoid_ingredients is not None:
         for ing in avoid_ingredients:
-            recipes_ing = RecipeIngredient.select().where(RecipeIngredient.ingredient.contains(ing))
+            recipes_ing = RecipeIngredient.select(RecipeIngredient.recipe).where(RecipeIngredient.ingredient.contains(ing))
             recipes = recipes.where(Recipe.id.not_in(recipes_ing))
 
     if search_ingredients is not None:
