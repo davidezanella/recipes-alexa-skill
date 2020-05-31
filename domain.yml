@@ -51,6 +51,7 @@ intents:
   - search_recipe
   - choose_recipe
   - get_recipe_info
+  - get_recipe_ingredients
   - get_recipe_nutrition
   - get_recipe_steps
   - start_cooking
@@ -58,6 +59,7 @@ intents:
 
 actions:
   - action_get_recipe_info
+  - action_get_recipe_ingredients
   - action_get_recipe_nutrition
   - action_get_recipe_steps
   - action_start_cooking

@@ -96,6 +96,16 @@
   - slot{"chosen_recipe": 2}
   - action_get_recipe_info
   
+## base: get_recipe_ingredients
+* get_recipe_ingredients
+  - action_get_recipe_info
+  
+## base: get_recipe_ingredients 2
+* get_recipe_ingredients{"ordinal": "3"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_ingredients
+  
 ## base: get_recipe_nutrition
 * get_recipe_nutrition
   - action_get_recipe_nutrition

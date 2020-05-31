@@ -107,6 +107,15 @@
 - Tell me about the first one
 - Describe the second recipe
 
+## intent:get_recipe_ingredients
+- Tell me the ingredients
+- Explain the ingredients
+- Ingredients needed?
+- What are the ingredients?
+- Its ingredients?
+- tell me the ingredients of the third one
+- the ingredients for the second one?
+
 ## intent:get_recipe_nutrition
 - Tell me the nutrition info of the first one
 - What about the nutrition info of the second recipe?

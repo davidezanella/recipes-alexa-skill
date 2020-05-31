@@ -11,7 +11,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-from recipes_db.models import Step
+from recipes_db.models import Step, RecipeIngredient
 from recipes_db.db_functions import search_recipes
 
 from utils import string_to_bool, string_to_int
@@ -186,6 +186,26 @@ class ActionGetRecipeInfo(Action):
         dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
             recipes[chosen_recipe]['name'], recipes[chosen_recipe]['preparation_minutes']))
         dispatcher.utter_message(text=recipes[chosen_recipe]['description'])
+
+        return []
+
+
+class ActionGetRecipeIngredients(Action):
+    def name(self) -> Text:
+        return "action_get_recipe_ingredients"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        recipes = tracker.get_slot("recipes")
+        chosen_recipe = tracker.get_slot("chosen_recipe")
+        dispatcher.utter_message(text="To make the '{}' you will need:".format(
+            recipes[chosen_recipe]['name']))
+        for ing in RecipeIngredient.select().where(RecipeIngredient.recipe == recipes[chosen_recipe]['id']):
+            text = ing.ingredient.name
+            if ing.quantity not in [None, "", "some"]:
+                text = ing.quantity + " " + text
+            dispatcher.utter_message(text)
 
         return []
 
