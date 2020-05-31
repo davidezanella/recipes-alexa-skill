@@ -96,6 +96,16 @@
   - slot{"chosen_recipe": 2}
   - action_get_recipe_info
   
+## chain: get_recipe_info
+* get_recipe_info{"ordinal": "3"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_info
+* choose_recipe{"ordinal": "2"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
+  - action_get_recipe_info
+  
 ## base: get_recipe_ingredients
 * get_recipe_ingredients
   - action_get_recipe_info
@@ -104,6 +114,16 @@
 * get_recipe_ingredients{"ordinal": "3"}
   - action_choose_recipe
   - slot{"chosen_recipe": 3}
+  - action_get_recipe_ingredients
+  
+## chain: get_recipe_ingredients
+* get_recipe_ingredients{"ordinal": "3"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_ingredients
+* choose_recipe{"ordinal": "2"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
   - action_get_recipe_ingredients
   
 ## base: get_recipe_nutrition
@@ -116,12 +136,32 @@
   - slot{"chosen_recipe": 2}
   - action_get_recipe_nutrition
   
+## chain: get_recipe_nutrition
+* get_recipe_nutrition{"ordinal": "3"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_nutrition
+* choose_recipe{"ordinal": "2"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
+  - action_get_recipe_nutrition
+  
 ## base: get_recipe_steps
 * get_recipe_steps
   - action_get_recipe_steps
   
 ## base: get_recipe_steps 2
 * get_recipe_steps{"ordinal": 2}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
+  - action_get_recipe_steps
+  
+## chain: get_recipe_steps
+* get_recipe_steps{"ordinal": "3"}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_steps
+* choose_recipe{"ordinal": "2"}
   - action_choose_recipe
   - slot{"chosen_recipe": 2}
   - action_get_recipe_steps
@@ -146,6 +186,37 @@
   - slot{"chosen_recipe": 1}
 * get_recipe_info
   - action_get_recipe_info
+* start_cooking
+  - action_start_cooking
+  - slot{"step_index": 0}
+* next_step
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step
+  - action_next_step
+  - slot{"step_index": 2}
+* next_step
+  - action_next_step
+  - slot{"step_index": 3}
+* next_step
+  - action_next_step
+  - slot{"step_index": null}
+
+## search_text + cook
+* search_recipe{"search_text": "strudel"}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"search_text": "strudel"}
+  - form{"name": null}
+* choose_recipe{"ordinal": 1}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 1}
+* get_recipe_ingredients
+  - action_get_recipe_ingredients
+* choose_recipe{"ordinal": 2}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
+  - action_get_recipe_ingredients
 * start_cooking
   - action_start_cooking
   - slot{"step_index": 0}

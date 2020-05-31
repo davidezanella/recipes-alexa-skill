@@ -183,6 +183,11 @@ class ActionGetRecipeInfo(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
             recipes[chosen_recipe]['name'], recipes[chosen_recipe]['preparation_minutes']))
         dispatcher.utter_message(text=recipes[chosen_recipe]['description'])
@@ -199,6 +204,11 @@ class ActionGetRecipeIngredients(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         dispatcher.utter_message(text="To make the '{}' you will need:".format(
             recipes[chosen_recipe]['name']))
         for ing in RecipeIngredient.select().where(RecipeIngredient.recipe == recipes[chosen_recipe]['id']):
@@ -219,6 +229,11 @@ class ActionGetRecipeNutrition(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         dispatcher.utter_message(text="This is the nutrition info for the '{}'".format(recipes[chosen_recipe]['name']))
         dispatcher.utter_message(text="Calories: {}, total fat percentage: {} %, sugar percentage: {} %,"
                                       "sodium percentage: {} %, protein percentage: {} %,"
@@ -240,6 +255,11 @@ class ActionGetRecipeSteps(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         dispatcher.utter_message(text="This is the steps for the '{}'".format(recipes[chosen_recipe]['name']))
         for step in Step.select().where(Step.recipe == recipes[chosen_recipe]['id']).order_by(Step.index):
             dispatcher.utter_message(text=step.text)
@@ -256,6 +276,11 @@ class ActionStartCooking(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         dispatcher.utter_message(text="Ok let's start doing the '{}'. "
                                       "Tell me when you're ready.".format(recipes[chosen_recipe]['name']))
 
@@ -271,6 +296,11 @@ class ActionNextStep(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         recipes = tracker.get_slot("recipes")
         chosen_recipe = tracker.get_slot("chosen_recipe")
+
+        if chosen_recipe is None:
+            dispatcher.utter_template("utter_rephrase", tracker)
+            return []
+
         step_index = tracker.get_slot("step_index")
         steps = Step.select().where((Step.recipe == recipes[chosen_recipe]['id']) & (Step.index == step_index))
         if len(steps) > 0:
