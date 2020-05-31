@@ -2,12 +2,12 @@ from .models import *
 
 
 def search_recipes(max_minutes, gluten_free, vegetarian, vegan, max_calories,
-                   search_ingredients, avoid_ingredients, page=1, name=''):
+                   search_ingredients, avoid_ingredients, page=1, search_text=''):
 
     recipes = Recipe.select().join(RecipeTag)
 
-    if name is not None:
-        recipes = recipes.where(Recipe.name.contains(name))
+    if search_text is not None:
+        recipes = recipes.where(Recipe.name.contains(search_text))
     if max_minutes is not None:
         recipes = recipes.where(Recipe.preparation_minutes <= max_minutes)
     if gluten_free:

@@ -2,10 +2,8 @@
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
 pipeline:
-  - name: WhitespaceTokenizer
-  - name: DucklingHTTPExtractor
-    url: "http://localhost:9900"
-    dimensions: ["number", "ordinal"]
+  - name: ConveRTTokenizer
+  - name: ConveRTFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -13,6 +11,9 @@ pipeline:
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
+  - name: DucklingHTTPExtractor
+    url: "http://localhost:9900"
+    dimensions: ["number", "ordinal"]
   - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper

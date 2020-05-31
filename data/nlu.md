@@ -15,23 +15,64 @@
 ## intent:search_recipe
 - I want to cook something using [carrots](search_ingredients)
 - I want to cook using [potatoes](search_ingredients) and [chicken](search_ingredients)
+- I have some [peppers](search_ingredients) what can i cook?
+- I have some [eggs](search_ingredients) what can i prepare?
+
 - I would like to prepare a [dessert](search_text)
+- find the recipe of the [strudel](search_text)
+- i want to cook the [angel pie](search_text)
+- the recipe of the [carrots pie](search_text)?
+- i would like to cook the [spaghetti](search_text)
+
 - I have [30](max_minutes) minutes what can I prepare?
+- I have [50](max_minutes) minutes what can I prepare?
 - I have only [40](max_minutes) minutes what can I cook?
+- I want to cook something but I have only [40](max_minutes) minutes
+- what can i cook in [60](max_minutes) minutes?
+- what can i cook in [30](max_minutes) minutes?
+- what can i cook in [thirty](max_minutes) minutes?
+- what can i cook in [fifty](max_minutes) minutes?
+- find a recipe that i can prepare in [45](max_minutes) minutes
+- find a recipe ready in [45](max_minutes) minutes
+- find a recipe ready in maximum [60](max_minutes) minutes
+
 - I am looking for [gluten free]{"entity": "gluten_free", "value": "true"} recipe"
 - Tell me some recipe for a dish [without gluten]{"entity": "gluten_free", "value": "true"}
 - What can you suggest me to cook for [celiac]{"entity": "gluten_free", "value": "true"}?
 - What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
 - What can I cook [gluten-free]{"entity": "gluten_free", "value": "true"}?
 - What can I prepare [gluten free]{"entity": "gluten_free", "value": "true"}?
+
 - What can you suggest me to cook for [vegetarian]{"entity": "vegetarian", "value": "true"}?
+- i want to cook [vegetarian]{"entity": "vegetarian", "value": "true"}
+- find some [vegetarian]{"entity": "vegetarian", "value": "true"} recipes
+- find some recipes for [vegetarians]{"entity": "vegetarian", "value": "true"}
+- i need a [vegetarian]{"entity": "vegetarian", "value": "true"} recipe
+
 - What can you suggest me to cook for [vegan]{"entity": "vegan", "value": "true"}?
+- i want to cook [vegan]{"entity": "vegan", "value": "true"}
+- find some [vegan]{"entity": "vegan", "value": "true"} recipes
+- fid some recipes for [vegan]{"entity": "vegan", "value": "true"}
+- i need a [vegan]{"entity": "vegan", "value": "true"} recipe
+
 - I want to cook something with maximum [200](max_calories) calories
 - What can I cook with only [100](max_calories) calories?
+- i should assume only [150](max_calories) calories
+- find a recipe with maximum [170](max_calories) calories
+- What can I cook with maximum [150](max_calories) calories?
+- i need a recipe with only [150](max_calories) calories
+- i need a recipe with maximum [150](max_calories) calories
+
 - I want something without [peppers](avoid_ingredients)
 - I don't have any [eggs](avoid_ingredients)
 - I don't like [eggs](avoid_ingredients)
 - I don't want [eggs](avoid_ingredients) and [chicken](avoid_ingredients)
+
+- what can i cook in [60](max_minutes) minutes and maximum [200](max_calories) calories
+- what can i cook in [60](max_minutes) minutes with [200](max_calories) calories
+- i need a recipe ready in [70](max_minutes) minutes with maximum [140](max_calories) calories
+- i need some recipes ready in [30](max_minutes) minutes and maximum [20](max_calories) calories
+- i want a recipe with maximum [300](max_calories) calories but i have only [25](max_minutes) minutes
 
 ## intent:choose_recipe
 - I want to cook the first one

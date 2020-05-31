@@ -14,39 +14,72 @@ from rasa_sdk.events import SlotSet
 from recipes_db.models import Step
 from recipes_db.db_functions import search_recipes
 
-from utils import string_to_bool
+from utils import string_to_bool, string_to_int
+
+
+def map_entities(tracker, ner_ent_name, target_ent_name):
+    entities = tracker.latest_message['entities']
+
+    target_ents = list(filter(lambda x: x['entity'] == target_ent_name, entities))
+    if len(target_ents) == 0:
+        return None
+
+    target_ent = target_ents[0]
+    ner_ents = list(filter(lambda x:
+                           x['entity'] == ner_ent_name and
+                           x['start'] == target_ent['start'] and
+                           x['end'] == target_ent['end'], entities))
+
+    if len(ner_ents) > 0:
+        return ner_ents[0]['value']
+
+    return None
 
 
 class ActionFormSearchRecipe(FormAction):
     def name(self) -> Text:
         return "action_form_search_recipe"
 
-    entities = ["page", "gluten_free", "vegetarian", "vegan", "search_text", "max_minutes", "max_calories",
-                "search_ingredients", "avoid_ingredients"]
+    entities = [
+        ("page", "page"), ("gluten_free", "gluten_free"), ("vegetarian", "vegetarian"), ("vegan", "vegan"),
+        ("search_text", "search_text"), ("max_minutes", "number"), ("max_calories", "number"),
+        ("search_ingredients", "search_ingredients"), ("avoid_ingredients", "avoid_ingredients")
+    ]
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        entities = ActionFormSearchRecipe.entities[:4]
-        for ent in ActionFormSearchRecipe.entities[4:]:
-            if tracker.get_slot(ent) is not None:
-                entities.append(ent)
-        if len(entities) > 0:
-            return entities
-        return ActionFormSearchRecipe.entities
+        entities = []
+        for ent in ActionFormSearchRecipe.entities:
+            if map_entities(tracker, ent[1], ent[0]) is not None:
+                entities.append(ent[0])
+        return entities
 
     # TODO: add intents
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
             "page": self.from_entity(entity="page"),
             "search_text": self.from_entity(entity="search_text"),
-            "max_minutes": self.from_entity(entity="max_minutes"),
+            "max_minutes": [
+                self.from_entity(entity="max_minutes"),
+                self.from_entity(entity="number")
+            ],
             "gluten_free": self.from_entity(entity="gluten_free"),
             "vegetarian": self.from_entity(entity="vegetarian"),
             "vegan": self.from_entity(entity="vegan"),
-            "max_calories": self.from_entity(entity="max_calories"),
+            "max_calories": [
+                self.from_entity(entity="max_calories"),
+                self.from_entity(entity="number")
+            ],
             "search_ingredients": self.from_entity(entity="search_ingredients"),
             "avoid_ingredients": self.from_entity(entity="avoid_ingredients"),
         }
+
+    def reset_all_slots(self):
+        slots = [SlotSet('page', 1)]
+        for entity in self.entities[1:]:
+            slots.append(SlotSet(entity[0], None))
+            slots.append(SlotSet(entity[1], None))
+        return slots
 
     def validate_page(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                       domain: Dict[Text, Any]) -> Dict[Text, Any]:
@@ -60,7 +93,8 @@ class ActionFormSearchRecipe(FormAction):
 
     def validate_max_minutes(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                              domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        return {"max_minutes": value}
+        value = map_entities(tracker, 'max_minutes', 'number')
+        return {"max_minutes": string_to_int(value)}
 
     def validate_gluten_free(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                              domain: Dict[Text, Any]) -> Dict[Text, Any]:
@@ -76,7 +110,8 @@ class ActionFormSearchRecipe(FormAction):
 
     def validate_max_calories(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                               domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        return {"max_calories": value}
+        value = map_entities(tracker, 'max_calories', 'number')
+        return {"max_calories": string_to_int(value)}
 
     def validate_search_ingredients(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                                     domain: Dict[Text, Any]) -> Dict[Text, Any]:
@@ -93,17 +128,15 @@ class ActionFormSearchRecipe(FormAction):
     def submit(self, dispatcher: CollectingDispatcher,
                tracker: Tracker,
                domain: Dict[Text, Any]) -> List[Dict]:
-        recipes = search_recipes(page=tracker.get_slot("page"), name=tracker.get_slot("search_text"),
-                                 max_minutes=tracker.get_slot("max_minutes"),
-                                 gluten_free=tracker.get_slot("gluten_free"),
-                                 vegetarian=tracker.get_slot("vegetarian"), vegan=tracker.get_slot("vegan"),
-                                 max_calories=tracker.get_slot("max_calories"),
-                                 search_ingredients=tracker.get_slot("search_ingredients"),
-                                 avoid_ingredients=tracker.get_slot("avoid_ingredients"))
+
+        params = {}
+        for ent in self.entities:
+            params[ent[0]] = tracker.get_slot(ent[0])
+
+        recipes = search_recipes(**params)
 
         print(ActionFormSearchRecipe.required_slots(tracker))
-        for ent in ActionFormSearchRecipe.entities:
-            print(ent, tracker.get_slot(ent))
+        print(params)
         print("-" * 15)
 
         if len(recipes) == 0:
@@ -113,7 +146,8 @@ class ActionFormSearchRecipe(FormAction):
                 dispatcher.utter_message(text="{}° recipe: '{}'".format(i + 1, recipe.name))
 
         recipes = list(map(lambda x: x.to_dict(), recipes))
-        return [SlotSet("recipes", recipes)]
+        slots = self.reset_all_slots()
+        return slots + [SlotSet("recipes", recipes)]
 
 
 class ActionChooseRecipe(Action):
@@ -125,8 +159,6 @@ class ActionChooseRecipe(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-        recipes = tracker.get_slot("recipes")
-
         chosen_recipe = None
         for slot in self.possible_slots:
             v = tracker.get_slot(slot)
@@ -139,8 +171,6 @@ class ActionChooseRecipe(Action):
             return []
 
         chosen_recipe = chosen_recipe - 1
-        dispatcher.utter_message(text="Ok so you are interested in the '{}'".format(recipes[chosen_recipe]['name']))
-
         return [SlotSet("chosen_recipe", chosen_recipe)]
 
 

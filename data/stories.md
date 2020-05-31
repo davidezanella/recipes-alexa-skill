@@ -7,35 +7,35 @@
   - utter_goodbye
 
 ## base: gluten free
-* search_recipe{"gluten_free": "true"}
+* search_recipe{"gluten_free": true}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"gluten_free": true}
   - form{"name": null}
 
 ## base: vegan
-* search_recipe{"vegan": "true"}
+* search_recipe{"vegan": true}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"vegan": true}
   - form{"name": null}
 
 ## base: vegetarian
-* search_recipe{"vegetarian": "true"}
+* search_recipe{"vegetarian": true}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"vegetarian": true}
   - form{"name": null}
 
 ## base: max_calories
-* search_recipe{"max_calories": "30"}
+* search_recipe{"max_calories": 30}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"max_calories": 30}
   - form{"name": null}
 
 ## base: max_minutes
-* search_recipe{"max_minutes": "30"}
+* search_recipe{"max_minutes": 30}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"max_minutes": 30}
@@ -94,7 +94,7 @@
   - action_get_recipe_nutrition
   
 ## base: get_recipe_nutrition 2
-* get_recipe_nutrition{"ordinal": "2"}
+* get_recipe_nutrition{"ordinal": 2}
   - action_choose_recipe
   - slot{"chosen_recipe": 2}
   - action_get_recipe_nutrition
@@ -104,7 +104,7 @@
   - action_get_recipe_steps
   
 ## base: get_recipe_steps 2
-* get_recipe_steps{"ordinal": "2"}
+* get_recipe_steps{"ordinal": 2}
   - action_choose_recipe
   - slot{"chosen_recipe": 2}
   - action_get_recipe_steps
@@ -119,12 +119,12 @@
   - action_next_step
 
 ## gluten free + cook
-* search_recipe{"gluten_free": "true"}
+* search_recipe{"gluten_free": true}
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"gluten_free": true}
   - form{"name": null}
-* choose_recipe{"ordinal": "1"}
+* choose_recipe{"ordinal": 1}
   - action_choose_recipe
   - slot{"chosen_recipe": 1}
 * get_recipe_info

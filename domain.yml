@@ -1,36 +1,27 @@
 slots:
   search_text:
-    type: unfeaturized
-    auto_fill: false
+    type: text
   max_minutes:
-    type: unfeaturized
-    auto_fill: false
+    type: float
   gluten_free:
     type: bool
-    auto_fill: false
     initial_value: false
   vegetarian:
     type: bool
-    auto_fill: false
     initial_value: false
   vegan:
     type: bool
-    auto_fill: false
     initial_value: false
   max_calories:
-    type: unfeaturized
-    auto_fill: false
+    type: float
   search_ingredients:
-    type: unfeaturized
-    auto_fill: false
+    type: list
   avoid_ingredients:
-    type: unfeaturized
-    auto_fill: false
+    type: list
   chosen_recipe:
     type: unfeaturized
-    auto_fill: false
   number:
-    type: float
+    type: list
   ordinal:
     type: float
   page:
