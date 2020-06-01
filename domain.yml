@@ -37,6 +37,8 @@ intents:
 - get_recipe_steps
 - start_cooking
 - next_step
+- affirm
+- deny
 responses:
   utter_goodbye:
   - text: See you soon.
@@ -45,6 +47,8 @@ responses:
   utter_rephrase:
   - text: Can you please rephrase?
   - text: Sorry, I didn't get that. Can you rephrase?
+  utter_deny:
+    - text: Oh sorry, I didn't get it. Can you repeat?
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60

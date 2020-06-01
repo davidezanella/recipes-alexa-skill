@@ -171,6 +171,13 @@
   - action_start_cooking
   - slot{"step_index": 0}
   
+## base: start_cooking 2
+* start_cooking{"ordinal": 2}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 2}
+  - action_start_cooking
+  - slot{"step_index": 0}
+  
 ## base: next_step
 * next_step
   - action_next_step
@@ -222,7 +229,7 @@
 * start_cooking
   - action_start_cooking
   - slot{"step_index": 0}
-* next_step
+* affirm
   - action_next_step
   - slot{"step_index": 1}
 * next_step
@@ -251,3 +258,7 @@
   - action_choose_recipe
   - slot{"chosen_recipe": 8}
   - action_get_recipe_info
+
+## action deny
+* deny
+  - utter_deny

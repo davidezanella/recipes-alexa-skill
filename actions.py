@@ -138,7 +138,7 @@ class ActionFormSearchRecipe(FormAction):
             txt = ''
             for i, recipe in enumerate(recipes):
                 idx = i + 1 + (params['page'] - 1) * 5
-                txt += "{}: '{}'\n".format(idx, recipe.name)
+                txt += "{}: '{}'.\n".format(idx, recipe.name)
             dispatcher.utter_message(txt)
 
         old_recipes = tracker.get_slot("recipes")
@@ -239,7 +239,7 @@ class ActionGetRecipeIngredients(Action):
             text = ing.ingredient.name
             if ing.quantity not in [None, "", "some"]:
                 text = ing.quantity + " " + text
-            txt += text + "\n"
+            txt += text + ".\n"
         dispatcher.utter_message(txt)
 
         return []
@@ -286,9 +286,9 @@ class ActionGetRecipeSteps(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        txt = "This is the steps for the '{}'\n".format(recipes[chosen_recipe]['name'])
+        txt = "This is the steps for the '{}'.\n".format(recipes[chosen_recipe]['name'])
         for step in Step.select().where(Step.recipe == recipes[chosen_recipe]['id']).order_by(Step.index):
-            txt += step.text + "\n"
+            txt += str(step.index + 1) + ": " + step.text + ".\n"
         dispatcher.utter_message(txt)
 
         return []
@@ -308,8 +308,8 @@ class ActionStartCooking(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        dispatcher.utter_message(text="Ok let's start doing the '{}'. "
-                                      "Tell me when you're ready.".format(recipes[chosen_recipe]['name']))
+        dispatcher.utter_message(text="Ok, so do you want to start preparing the '{}'?"
+                                 .format(recipes[chosen_recipe]['name']))
 
         return [SlotSet("step_index", 0)]
 
