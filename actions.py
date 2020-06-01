@@ -135,9 +135,11 @@ class ActionFormSearchRecipe(FormAction):
         if len(recipes) == 0:
             dispatcher.utter_message(text="No recipes found with this filters!")
         else:
+            txt = ''
             for i, recipe in enumerate(recipes):
                 idx = i + 1 + (params['page'] - 1) * 5
-                dispatcher.utter_message(text="{}° recipe: '{}'".format(idx, recipe.name))
+                txt += "{}: '{}'\n".format(idx, recipe.name)
+            dispatcher.utter_message(txt)
 
         old_recipes = tracker.get_slot("recipes")
         if old_recipes is None:
@@ -211,9 +213,9 @@ class ActionGetRecipeInfo(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:".format(
-            recipes[chosen_recipe]['name'], recipes[chosen_recipe]['preparation_minutes']))
-        dispatcher.utter_message(text=recipes[chosen_recipe]['description'])
+        dispatcher.utter_message(text="The '{}' takes {} minutes to be done, and this is its description:\n{}".format(
+            recipes[chosen_recipe]['name'], recipes[chosen_recipe]['preparation_minutes'],
+            recipes[chosen_recipe]['description']))
 
         return []
 
@@ -232,13 +234,13 @@ class ActionGetRecipeIngredients(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        dispatcher.utter_message(text="To make the '{}' you will need:".format(
-            recipes[chosen_recipe]['name']))
+        txt = "To make the '{}' you will need:\n".format(recipes[chosen_recipe]['name'])
         for ing in RecipeIngredient.select().where(RecipeIngredient.recipe == recipes[chosen_recipe]['id']):
             text = ing.ingredient.name
             if ing.quantity not in [None, "", "some"]:
                 text = ing.quantity + " " + text
-            dispatcher.utter_message(text)
+            txt += text + "\n"
+        dispatcher.utter_message(txt)
 
         return []
 
@@ -257,10 +259,11 @@ class ActionGetRecipeNutrition(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        dispatcher.utter_message(text="This is the nutrition info for the '{}'".format(recipes[chosen_recipe]['name']))
-        dispatcher.utter_message(text="Calories: {}, total fat percentage: {} %, sugar percentage: {} %,"
+        dispatcher.utter_message(text="This is the nutrition info for the '{}'. "
+                                      "Calories: {}, total fat percentage: {} %, sugar percentage: {} %,"
                                       "sodium percentage: {} %, protein percentage: {} %,"
                                       "saturated fat percentage: {} %, total carbohydrate percentage: {} %".format(
+            recipes[chosen_recipe]['name'],
             recipes[chosen_recipe]['calories'], recipes[chosen_recipe]['total_fat_perc'],
             recipes[chosen_recipe]['sugar_perc'], recipes[chosen_recipe]['sodium_perc'],
             recipes[chosen_recipe]['protein_perc'], recipes[chosen_recipe]['saturated_fat_perc'],
@@ -283,9 +286,10 @@ class ActionGetRecipeSteps(Action):
             dispatcher.utter_message(template="utter_rephrase")
             return []
 
-        dispatcher.utter_message(text="This is the steps for the '{}'".format(recipes[chosen_recipe]['name']))
+        txt = "This is the steps for the '{}'\n".format(recipes[chosen_recipe]['name'])
         for step in Step.select().where(Step.recipe == recipes[chosen_recipe]['id']).order_by(Step.index):
-            dispatcher.utter_message(text=step.text)
+            txt += step.text + "\n"
+        dispatcher.utter_message(txt)
 
         return []
 
