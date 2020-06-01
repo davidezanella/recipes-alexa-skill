@@ -7,7 +7,7 @@ def search_recipes(max_minutes, gluten_free, vegetarian, vegan, max_calories,
     recipes = Recipe.select().join(RecipeTag)
 
     if search_text is not None:
-        recipes = recipes.where(Recipe.name.contains(search_text))
+        recipes = recipes.where(Recipe.name.contains(search_text) | RecipeTag.tag.contains(search_text))
     if max_minutes is not None:
         recipes = recipes.where(Recipe.preparation_minutes <= max_minutes)
     if gluten_free:
