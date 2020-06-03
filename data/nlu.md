@@ -15,15 +15,32 @@
 ## intent:search_recipe
 #### search_ingredients
 - I want to cook something using [carrots](search_ingredients)
+- I want to cook something using [mushrooms](search_ingredients)
+- I want to cook something using [acacia](search_ingredients)
 - I want to cook using [potatoes](search_ingredients) and [chicken](search_ingredients)
+- I want to cook using [corn](search_ingredients) and [broccoli](search_ingredients)
+- I want to cook using [cabbage](search_ingredients) and [eggplant](search_ingredients)
 - I have some [peppers](search_ingredients) what can i cook?
+- I have some [onions](search_ingredients) what can i cook?
 - I have some [eggs](search_ingredients) what can i prepare?
+- I have some [radish](search_ingredients) what can i prepare?
+- I have some [cinnamon](search_ingredients) what can i prepare?
+- I have some [garlic](search_ingredients) what can i prepare?
 - What can i cook using [beef](search_ingredients)?
 - What can i cook using [eggs](search_ingredients)?
+- What can i cook using [basil](search_ingredients)?
+- What can i cook using [avocado](search_ingredients)?
 - find a recipe where i can cook using [cucumber](search_ingredients)
+- find a recipe where i can cook using [parsley](search_ingredients)
 - give me some recipes to cook using [salad](search_ingredients)
+- give me some recipes to cook using [mango](search_ingredients)
 - i need a recipe where i can use [sugar](search_ingredients)
+- i need a recipe where i can use [mint](search_ingredients)
+- i need a recipe where i can use [salt](search_ingredients)
+- i need a recipe where i can use [red chilly](search_ingredients)
+- i need a recipe where i can use [cardamom](search_ingredients)
 - search recipes to use [milk](search_ingredients)
+- search recipes to use [zucchini](search_ingredients)
 #### search_text
 - I would like to prepare a [dessert](search_text)
 - find the recipe of the [strudel](search_text)
@@ -93,15 +110,32 @@
 - recipes with maximum [170](max_calories) calories?
 #### avoid_ingredients
 - I want something without [peppers](avoid_ingredients)
+- I want something without [apple](avoid_ingredients)
+- I want something without [coconut](avoid_ingredients)
 - I don't have any [eggs](avoid_ingredients)
+- I don't have any [pers](avoid_ingredients)
+- I don't have any [sultana](avoid_ingredients)
 - I don't like [eggs](avoid_ingredients)
+- I don't like [kiwi](avoid_ingredients)
 - I don't want [eggs](avoid_ingredients) and [chicken](avoid_ingredients)
+- I don't want [mango](avoid_ingredients) and [watermelon](avoid_ingredients)
 - what can i cook without [eggs](avoid_ingredients)?
+- what can i cook without [cane sugar](avoid_ingredients)?
+- what can i cook without [cherry](avoid_ingredients)?
 - what can i cook without using [lemons](avoid_ingredients)?
+- what can i cook without using [caramel](avoid_ingredients)?
+- what can i cook without using [apricots](avoid_ingredients)?
 - what can i cook without using [carrots](avoid_ingredients) and [potatoes](avoid_ingredients)?
+- what can i cook without using [grapes](avoid_ingredients) and [banana](avoid_ingredients)?
 - find a recipe without [cucumber](avoid_ingredients)
+- find a recipe without [honey](avoid_ingredients)
 - avoid recipes with [tomatoes](avoid_ingredients)
+- avoid recipes with [peach](avoid_ingredients)
+- avoid recipes with [crab](avoid_ingredients)
+- avoid recipes with [chops](avoid_ingredients)
+- avoid recipes with [lamb](avoid_ingredients)
 - i don't want recipes with [potatoes](avoid_ingredients)
+- i don't want recipes with [bacon](avoid_ingredients)
 #### max_minutes + max_calories
 - what can i cook in [60](max_minutes) minutes and maximum [200](max_calories) calories
 - what can i cook in [60](max_minutes) minutes with [200](max_calories) calories
