@@ -181,6 +181,10 @@
 ## base: next_step
 * next_step
   - action_next_step
+  
+## base: clear_search
+* clear_search
+  - action_clear_search
 
 ## gluten free + cook
 * search_recipe{"gluten_free": true}

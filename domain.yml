@@ -39,6 +39,7 @@ intents:
 - next_step
 - affirm
 - deny
+- clear_search
 responses:
   utter_goodbye:
   - text: See you soon.

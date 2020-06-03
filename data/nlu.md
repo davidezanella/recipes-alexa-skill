@@ -222,6 +222,18 @@
 - What's next?
 - Next one
 
+## intent:clear_search
+- Reset the search filters
+- Reset the search
+- Start a new search
+- I want to search another recipe
+- Reset my search
+- Clear the search filters
+- Remove th previous filters
+- New search
+- Forget the previous parameters
+- Forget the previous filters
+
 ## intent:affirm
 - yes
 - of course

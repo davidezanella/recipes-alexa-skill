@@ -172,6 +172,9 @@ class ActionClearSearch(Action):
         for entity in ActionFormSearchRecipe.entities[1:]:
             slots.append(SlotSet(entity[0], None))
             slots.append(SlotSet(entity[1], None))
+
+        dispatcher.utter_message("All the search filters have been cleared!")
+
         return slots
 
 
