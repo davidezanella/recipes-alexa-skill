@@ -13,7 +13,7 @@ pipeline:
     max_ngram: 4
   - name: DucklingHTTPExtractor
     url: "http://localhost:9900"
-    dimensions: ["number", "ordinal"]
+    dimensions: ["ordinal"]
   - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper

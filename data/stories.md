@@ -201,7 +201,7 @@
 * start_cooking
   - action_start_cooking
   - slot{"step_index": 0}
-* next_step
+* affirm
   - action_next_step
   - slot{"step_index": 1}
 * next_step

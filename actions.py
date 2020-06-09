@@ -14,7 +14,7 @@ from rasa_sdk.events import SlotSet
 from recipes_db.models import Step, RecipeIngredient
 from recipes_db.db_functions import search_recipes
 
-from utils import string_to_bool, string_to_int
+from utils import string_to_bool, string_to_int, duckling_word_to_int
 
 
 def map_entities(tracker, ner_ent_name, target_ent_name):
@@ -42,7 +42,7 @@ class ActionFormSearchRecipe(FormAction):
 
     entities = [
         ("page", "page"), ("gluten_free", "gluten_free"), ("vegetarian", "vegetarian"), ("vegan", "vegan"),
-        ("search_text", "search_text"), ("max_minutes", "number"), ("max_calories", "number"),
+        ("search_text", "search_text"), ("max_minutes", "max_minutes"), ("max_calories", "max_calories"),
         ("search_ingredients", "search_ingredients"), ("avoid_ingredients", "avoid_ingredients")
     ]
 
@@ -59,17 +59,11 @@ class ActionFormSearchRecipe(FormAction):
         return {
             "page": self.from_entity(entity="page"),
             "search_text": self.from_entity(entity="search_text"),
-            "max_minutes": [
-                self.from_entity(entity="max_minutes"),
-                self.from_entity(entity="number")
-            ],
+            "max_minutes": self.from_entity(entity="max_minutes"),
             "gluten_free": self.from_entity(entity="gluten_free"),
             "vegetarian": self.from_entity(entity="vegetarian"),
             "vegan": self.from_entity(entity="vegan"),
-            "max_calories": [
-                self.from_entity(entity="max_calories"),
-                self.from_entity(entity="number")
-            ],
+            "max_calories": self.from_entity(entity="max_calories"),
             "search_ingredients": self.from_entity(entity="search_ingredients"),
             "avoid_ingredients": self.from_entity(entity="avoid_ingredients"),
         }
@@ -86,8 +80,7 @@ class ActionFormSearchRecipe(FormAction):
 
     def validate_max_minutes(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                              domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        value = map_entities(tracker, 'max_minutes', 'number')
-        return {"max_minutes": string_to_int(value)}
+        return {"max_minutes": duckling_word_to_int(value)}
 
     def validate_gluten_free(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                              domain: Dict[Text, Any]) -> Dict[Text, Any]:
@@ -103,8 +96,7 @@ class ActionFormSearchRecipe(FormAction):
 
     def validate_max_calories(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                               domain: Dict[Text, Any]) -> Dict[Text, Any]:
-        value = map_entities(tracker, 'max_calories', 'number')
-        return {"max_calories": string_to_int(value)}
+        return {"max_calories": duckling_word_to_int(value)}
 
     def validate_search_ingredients(self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker,
                                     domain: Dict[Text, Any]) -> Dict[Text, Any]:
@@ -182,7 +174,7 @@ class ActionChooseRecipe(Action):
     def name(self) -> Text:
         return "action_choose_recipe"
 
-    possible_slots = ['ordinal', 'number']
+    possible_slots = ['ordinal']
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

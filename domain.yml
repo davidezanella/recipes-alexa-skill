@@ -56,23 +56,26 @@ session_config:
 slots:
   avoid_ingredients:
     type: list
-  chosen_recipe:
-    type: unfeaturized
+  search_ingredients:
+    type: list
+  search_text:
+    type: text
   gluten_free:
     initial_value: false
     type: bool
+  vegan:
+    initial_value: false
+    type: bool
+  vegetarian:
+    initial_value: false
+    type: bool
   max_calories:
-    max_value: 1.0
     min_value: 0.0
     type: float
   max_minutes:
-    max_value: 1.0
     min_value: 0.0
     type: float
-  number:
-    type: list
   ordinal:
-    max_value: 1.0
     min_value: 0.0
     type: float
   page:
@@ -80,17 +83,7 @@ slots:
     type: unfeaturized
   recipes:
     type: unfeaturized
-  requested_slot:
+  chosen_recipe:
     type: unfeaturized
-  search_ingredients:
-    type: list
-  search_text:
-    type: text
   step_index:
     type: unfeaturized
-  vegan:
-    initial_value: false
-    type: bool
-  vegetarian:
-    initial_value: false
-    type: bool
