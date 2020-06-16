@@ -177,7 +177,6 @@
 - other options?
 
 ## intent:choose_recipe
-- I want to cook the first one
 - I like the first recipe
 - I like the second recipe
 - I like the second one
@@ -247,6 +246,7 @@
 - I want to do the first one
 - I want to do the first recipe
 - I want to cook the first of the list
+- I want to cook the first one
 
 ## intent:next_step
 - I've done

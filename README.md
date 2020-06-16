@@ -1,6 +1,6 @@
 # Recipes Alexa skill
 
-Final project for the **Language understanding systems** course @ UniTN. A.A. 2019-2020
+Final project for the **Language understanding systems** course @ UniTN A.Y. 2019-2020
 
 Dataset used to search recipes: [Food.com recipes and user interactions](https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions?select=RAW_recipes.csv)
 
