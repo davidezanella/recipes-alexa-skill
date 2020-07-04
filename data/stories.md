@@ -214,6 +214,33 @@
   - action_next_step
   - slot{"step_index": null}
 
+## avoid ingredient + cook
+* search_recipe{"search_ingredients": ["potatoes", "eggs"], "avoid_ingredients": "carrot"}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"avoid_ingredients": ["carrot"]}
+  - slot{"search_ingredients": ["potatoes", "eggs"]}
+  - form{"name": null}
+* choose_recipe{"ordinal": 1}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 1}
+  - action_get_recipe_info
+* start_cooking
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step
+  - action_next_step
+  - slot{"step_index": 2}
+* next_step
+  - action_next_step
+  - slot{"step_index": 3}
+* next_step
+  - action_next_step
+  - slot{"step_index": null}
+
 ## search_text + cook
 * search_recipe{"search_text": "strudel"}
   - action_form_search_recipe
@@ -262,6 +289,37 @@
   - action_choose_recipe
   - slot{"chosen_recipe": 8}
   - action_get_recipe_info
+
+## affirm cooking
+* start_cooking
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step
+  - action_next_step
+  - slot{"step_index": 2}
+
+## affirm cooking + ordinal
+* start_cooking{"ordinal": 1}
+  - action_choose_recipe
+  - slot{"chosen_recipe": 1}
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step
+  - action_next_step
+  - slot{"step_index": 2}
+  
+## deny cooking
+* start_cooking
+  - action_start_cooking
+  - slot{"step_index": 0}
+* deny
+  - utter_deny
 
 ## action deny
 * deny

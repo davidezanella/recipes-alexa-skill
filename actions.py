@@ -159,7 +159,6 @@ class ActionClearSearch(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-
         slots = [SlotSet('page', 1), SlotSet('recipes', [])]
         for entity in ActionFormSearchRecipe.entities[1:]:
             slots.append(SlotSet(entity[0], None))
