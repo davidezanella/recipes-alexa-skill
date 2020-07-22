@@ -20,6 +20,28 @@
 * goodbye: bye-bye!
   - utter_goodbye
 
+## search 2 ingredients
+* greet: hello there!
+  - utter_greet
+* search_recipe: i would like to cook something using [rosemary](search_ingredients) and [meat](search_ingredients)
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"search_ingredients": ["rosemary", "meat"]}
+  - form{"name": null}
+* goodbye: bye-bye!
+  - utter_goodbye
+
+## search 3 ingredients
+* greet: hello there!
+  - utter_greet
+* search_recipe: i would like to cook using [rosemary](search_ingredients), [meat](search_ingredients) and [carrots](search_ingredients)
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"search_ingredients": ["rosemary", "meat", "carrots"]}
+  - form{"name": null}
+* goodbye: bye-bye!
+  - utter_goodbye
+
 ## avoid ingredients
 * greet: hello there!
   - utter_greet
@@ -27,6 +49,28 @@
   - action_form_search_recipe
   - form{"name": "action_form_search_recipe"}
   - slot{"avoid_ingredients": ["pineapple"]}
+  - form{"name": null}
+* goodbye: bye-bye!
+  - utter_goodbye
+
+## avoid 2 ingredients
+* greet: hello there!
+  - utter_greet
+* search_recipe: i would like to cook something without using [pineapple](avoid_ingredients) or [carrots](avoid_ingredients)
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"avoid_ingredients": ["pineapple", "carrots"]}
+  - form{"name": null}
+* goodbye: bye-bye!
+  - utter_goodbye
+
+## avoid 3 ingredients
+* greet: hello there!
+  - utter_greet
+* search_recipe: i would like to cook something without using [pineapple](avoid_ingredients), [pears](avoid_ingredients) or [carrots](avoid_ingredients)
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"avoid_ingredients": ["pineapple", "pears", "carrots"]}
   - form{"name": null}
 * goodbye: bye-bye!
   - utter_goodbye
@@ -166,5 +210,81 @@
   - slot{"step_index": 0}
 * deny: No, I changed my mind
   - utter_deny
+* goodbye: bye-bye!
+  - utter_goodbye
+
+## complex: max_minutes + max_calories + vegan
+* greet: hello there!
+  - utter_greet
+* search_recipe: i need a recipe with maximum [120](max_calories) calories, that takes maximum [70](max_minutes) minutes for [vegans]{"entity": "vegan", "value": "true"}
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"max_calories": 120}
+  - slot{"max_minutes": 70}
+  - slot{"vegan": true}
+  - form{"name": null}
+* get_recipe_nutrition: Describe the nutrition of the [third]{"entity": "ordinal", "value": "3"} one
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_nutrition
+* get_recipe_ingredients: What do I need for that recipe?
+  - action_get_recipe_ingredients
+* start_cooking: fine, let's try to cook it!
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm: Yes, I'm ready
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step: already done
+  - action_next_step
+  - slot{"step_index": 2}  
+* goodbye: bye-bye!
+  - utter_goodbye
+
+## get_recipe_ingredients
+* greet: hello there!
+  - utter_greet
+* search_recipe: i need a recipe ready in [80](max_minutes) minutes
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"max_minutes": 70}
+  - form{"name": null}
+* get_recipe_ingredients: Explain the ingredients needed by the [third]{"entity": "ordinal", "value": "3"} recipe
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_ingredients
+* start_cooking: ok, i want to cook it!
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm: Yes, go on
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step: what's the next step?
+  - action_next_step
+  - slot{"step_index": 2}  
+* goodbye: bye-bye!
+  - utter_goodbye
+  
+## get_recipe_steps
+* greet: hello there!
+  - utter_greet
+* search_recipe: i need a recipe ready in [80](max_minutes) minutes
+  - action_form_search_recipe
+  - form{"name": "action_form_search_recipe"}
+  - slot{"max_minutes": 70}
+  - form{"name": null}
+* get_recipe_steps: Explain the steps needed for the [third]{"entity": "ordinal", "value": "3"} recipe
+  - action_choose_recipe
+  - slot{"chosen_recipe": 3}
+  - action_get_recipe_steps
+* start_cooking: ok, i want to cook it!
+  - action_start_cooking
+  - slot{"step_index": 0}
+* affirm: Yes, go on
+  - action_next_step
+  - slot{"step_index": 1}
+* next_step: what's the next step?
+  - action_next_step
+  - slot{"step_index": 2}  
 * goodbye: bye-bye!
   - utter_goodbye

@@ -117,16 +117,16 @@
 - I don't have any [sultana](avoid_ingredients)
 - I don't like [eggs](avoid_ingredients)
 - I don't like [kiwi](avoid_ingredients)
-- I don't want [eggs](avoid_ingredients) and [chicken](avoid_ingredients)
-- I don't want [mango](avoid_ingredients) and [watermelon](avoid_ingredients)
+- I don't want [eggs](avoid_ingredients) or [chicken](avoid_ingredients)
+- I don't want [mango](avoid_ingredients) or [watermelon](avoid_ingredients)
 - what can i cook without [eggs](avoid_ingredients)?
 - what can i cook without [cane sugar](avoid_ingredients)?
 - what can i cook without [cherry](avoid_ingredients)?
 - what can i cook without using [lemons](avoid_ingredients)?
 - what can i cook without using [caramel](avoid_ingredients)?
 - what can i cook without using [apricots](avoid_ingredients)?
-- what can i cook without using [carrots](avoid_ingredients) and [potatoes](avoid_ingredients)?
-- what can i cook without using [grapes](avoid_ingredients) and [banana](avoid_ingredients)?
+- what can i cook without using [carrots](avoid_ingredients) or [potatoes](avoid_ingredients)?
+- what can i cook without using [grapes](avoid_ingredients) or [banana](avoid_ingredients)?
 - find a recipe without [cucumber](avoid_ingredients)
 - find a recipe without [honey](avoid_ingredients)
 - avoid recipes with [tomatoes](avoid_ingredients)
@@ -147,14 +147,19 @@
 - find a recipe for a [cake](search_text) where i can use [raspberries](search_ingredients)
 #### search_text + avoid_ingredients
 - find a recipe for a [dessert](search_text) without [strawberries](avoid_ingredients)
+- i want to cook a [pie](search_text) without using [apples](avoid_ingredients)
 #### gluten_free + search_ingredients
 - find a recipe [without gluten]{"entity": "gluten_free", "value": "true"} where i can use [salad](search_ingredients)
+- i want to cook something [gluten-free]{"entity": "gluten_free", "value": "true"} but using [strawberries](search_ingredients)
 #### vegetarians + search_ingredients
 - find a recipe for [vegetarians]{"entity": "vegetarian", "value": "true"} where i can use [salad](search_ingredients)
+- i want to cook something for [vegetarians]{"entity": "vegetarian", "value": "true"} using [strawberries](search_ingredients)
 #### vegan + search_ingredients
 - find a recipe for [vegan]{"entity": "vegan", "value": "true"} where i can use [salad](search_ingredients)
+- i want to cook something for [vegans]{"entity": "vegan", "value": "true"} using [strawberries](search_ingredients)
 #### search_ingredients + avoid_ingredients
 - find a recipe where i can use [strawberries](search_ingredients) but without [salad](avoid_ingredients)
+- i want to cook something using [raspberries](search_ingredients) but without using [strawberries](avoid_ingredients)
 
 ## intent:next_page
 - Are there others?
@@ -203,12 +208,16 @@
 
 ## intent:get_recipe_ingredients
 - Tell me the ingredients
+- Tell me the ingredients needed by the first one
 - Explain the ingredients
+- Explain the ingredients needed for the first one
 - Ingredients needed?
 - What are the ingredients?
 - What are its ingredients?
 - Its ingredients?
 - tell me the ingredients of the third one
+- tell me about the ingredients required by the third one
+- tell me about the ingredients required
 - the ingredients for the second one?
 - What do I need for the first recipe?
 - What are the ingredients for the second one?
@@ -255,6 +264,8 @@
 - I'm ready
 - What's next?
 - Next one
+- What's the next step?
+- The next step?
 
 ## intent:clear_search
 - Reset the search filters
