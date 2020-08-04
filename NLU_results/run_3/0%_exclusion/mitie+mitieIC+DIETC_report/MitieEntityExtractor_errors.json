@@ -1,0 +1,147 @@
+[
+  {
+    "text": "hi",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "hi",
+        "start": 0,
+        "end": 2,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "search the recipe of meet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to cook something using raspberries but without using strawberries",
+    "entities": [
+      {
+        "start": 31,
+        "end": 42,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "strawberries",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "raspberries",
+        "start": 31,
+        "end": 42,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "value": "strawberries",
+        "start": 61,
+        "end": 73,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 31,
+        "end": 42,
+        "value": "raspberries",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 61,
+        "end": 73,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for gluten free recipe\"",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "value": "for gluten",
+        "start": 13,
+        "end": 23,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "start": 17,
+        "end": 28,
+        "value": "gluten free",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "other options?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "options",
+        "start": 6,
+        "end": 13,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me its calories",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "max_calories",
+        "value": "its",
+        "start": 8,
+        "end": 11,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i don't want either of those",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "those",
+        "start": 23,
+        "end": 28,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  }
+]

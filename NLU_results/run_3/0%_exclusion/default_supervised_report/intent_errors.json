@@ -1,0 +1,66 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.19342336058616638
+    }
+  },
+  {
+    "text": "I don't like eggs",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.43545010685920715
+    }
+  },
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.2946062386035919
+    }
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.38021865487098694
+    }
+  },
+  {
+    "text": "Tell me more about it",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.22791829705238342
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.1784685105085373
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.20075979828834534
+    }
+  },
+  {
+    "text": "go for it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.536175012588501
+    }
+  }
+]

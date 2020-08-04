@@ -1,0 +1,50 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.1331624835729599
+    }
+  },
+  {
+    "text": "what about the second one?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.6353191137313843
+    }
+  },
+  {
+    "text": "Tell me its calories",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "get_recipe_steps",
+      "confidence": 0.24668075144290924
+    }
+  },
+  {
+    "text": "How many calories does it have?",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "get_recipe_steps",
+      "confidence": 0.20345214009284973
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.25116658210754395
+    }
+  },
+  {
+    "text": "alright",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.1425083577632904
+    }
+  }
+]

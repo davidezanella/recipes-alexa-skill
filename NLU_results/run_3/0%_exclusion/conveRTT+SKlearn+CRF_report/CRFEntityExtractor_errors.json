@@ -1,0 +1,169 @@
+[
+  {
+    "text": "I don't like eggs",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "eggs",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I don't have any eggs",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "eggs",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "search the recipe of meet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook something using carrots",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.44884687312016025,
+        "value": "carrots",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want to cook something using raspberries but without using strawberries",
+    "entities": [
+      {
+        "start": 31,
+        "end": 42,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "strawberries",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 31,
+        "end": 41,
+        "confidence_entity": 0.5553556824024812,
+        "value": "raspberrie",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 61,
+        "end": 73,
+        "confidence_entity": 0.9050043402044434,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to cook using potatoes and chicken",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "potatoes",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 34,
+        "end": 41,
+        "value": "chicken",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 34,
+        "end": 41,
+        "confidence_entity": 0.4404285348647875,
+        "value": "chicken",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want something without coconut",
+    "entities": [
+      {
+        "start": 25,
+        "end": 32,
+        "value": "coconut",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "search a recipe for pizza",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "pizza",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need a recipe where i can use sugar",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "sugar",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "strudel",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "text": "find a recipe where i can use strawberries but without salad",
+    "entities": [
+      {
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.3666010979117816,
+        "value": "salad",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want something without coconut",
+    "entities": [
+      {
+        "start": 25,
+        "end": 32,
+        "value": "coconut",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am looking for gluten free recipe\"",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what can i cook in thirty minutes?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 25,
+        "value": "thirty",
+        "entity": "max_minutes"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what can i cook without using grapes or banana?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "grapes",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 40,
+        "end": 46,
+        "confidence_entity": 0.5274040578731402,
+        "value": "banana",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.7760796580114748,
+        "value": "dessert",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "confidence_entity": 0.9469584486251514,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What can I cook gluten-free?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I don't like kiwi",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "kiwi",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need a recipe where i can use red chilly",
+    "entities": [
+      {
+        "start": 32,
+        "end": 42,
+        "value": "red chilly",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what can i cook without cane sugar?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 34,
+        "value": "cane sugar",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

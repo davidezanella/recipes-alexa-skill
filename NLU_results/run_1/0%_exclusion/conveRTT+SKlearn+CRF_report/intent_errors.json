@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Talk about the nutrition",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.26147337706902035
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.20458857938592784
+    }
+  },
+  {
+    "text": "I'm ready",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.4019466846979548
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.35467768195347016
+    }
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "text": "I have some eggs what can i prepare?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook without cherry?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 30,
+        "value": "cherry",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 24,
+        "end": 30,
+        "value": "cherry",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have some cinnamon what can i prepare?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "cinnamon",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 20,
+        "value": "cinnamon",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to cook something using carrots",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook without eggs?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "eggs",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 24,
+        "end": 28,
+        "value": "eggs",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "give me some recipes to cook using mango",
+    "entities": [
+      {
+        "start": 35,
+        "end": 40,
+        "value": "mango",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 35,
+        "end": 40,
+        "value": "mango",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use sugar",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "sugar",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 32,
+        "end": 37,
+        "value": "sugar",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "avoid recipes with chops",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "chops",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 19,
+        "end": 24,
+        "value": "chops",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe where i can cook using cucumber",
+    "entities": [
+      {
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

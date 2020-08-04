@@ -1,0 +1,90 @@
+[
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.49752289056777954
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.1593489795923233
+    }
+  },
+  {
+    "text": "I don't like kiwi",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5900798439979553
+    }
+  },
+  {
+    "text": "Tell me more about it",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.47857198119163513
+    }
+  },
+  {
+    "text": "Describe the steps",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.6034846901893616
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "get_recipe_nutrition",
+      "confidence": 0.26524993777275085
+    }
+  },
+  {
+    "text": "I'm ready",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.4023929536342621
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.7755554914474487
+    }
+  },
+  {
+    "text": "go for it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.42843174934387207
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5528947114944458
+    }
+  },
+  {
+    "text": "neither of these",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.2388710081577301
+    }
+  }
+]

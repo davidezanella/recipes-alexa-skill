@@ -1,0 +1,124 @@
+[
+  {
+    "text": "what can i cook without using grapes or banana?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "grapes",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "grapes",
+        "start": 30,
+        "end": 36,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "value": "banana",
+        "start": 40,
+        "end": 46,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use sugar",
+    "entities": [
+      {
+        "start": 32,
+        "end": 37,
+        "value": "sugar",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "sugar",
+        "start": 32,
+        "end": 37,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 32,
+        "end": 37,
+        "value": "sugar",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe without gluten where i can use salad",
+    "entities": [
+      {
+        "start": 14,
+        "end": 28,
+        "value": "true",
+        "entity": "gluten_free"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "value": "salad",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "value": "true",
+        "start": 14,
+        "end": 28,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "search_ingredients",
+        "value": "salad",
+        "start": 45,
+        "end": 50,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "start": 14,
+        "end": 28,
+        "value": "without gluten",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 45,
+        "end": 50,
+        "value": "salad",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

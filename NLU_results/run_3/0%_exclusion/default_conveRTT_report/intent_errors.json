@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.285952627658844
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.14728431403636932
+    }
+  }
+]

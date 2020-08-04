@@ -1,0 +1,219 @@
+[
+  {
+    "text": "hi",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "hi",
+        "start": 0,
+        "end": 2,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe where i can use strawberries but without salad",
+    "entities": [
+      {
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "strawberries",
+        "start": 30,
+        "end": 42,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "value": "salad",
+        "start": 55,
+        "end": 60,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am looking for gluten free recipe\"",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "value": "for gluten",
+        "start": 13,
+        "end": 23,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "start": 17,
+        "end": 28,
+        "value": "gluten free",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "dessert",
+        "start": 20,
+        "end": 27,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "value": "strawberries",
+        "start": 33,
+        "end": 45,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can I cook gluten-free?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "value": "cook gluten-free",
+        "start": 11,
+        "end": 27,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "start": 16,
+        "end": 27,
+        "value": "gluten-free",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use red chilly",
+    "entities": [
+      {
+        "start": 32,
+        "end": 42,
+        "value": "red chilly",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "red",
+        "start": 32,
+        "end": 35,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Talk about the nutrition",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "nutrition",
+        "start": 15,
+        "end": 24,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me its nutrition",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "nutrition",
+        "start": 12,
+        "end": 21,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  }
+]

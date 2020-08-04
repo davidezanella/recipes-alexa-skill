@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.15719182789325714
+    }
+  },
+  {
+    "text": "I'm ready",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.9077916145324707
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.7676339149475098
+    }
+  },
+  {
+    "text": "go for it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.544561505317688
+    }
+  }
+]

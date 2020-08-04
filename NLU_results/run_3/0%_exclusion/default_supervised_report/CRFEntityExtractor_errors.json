@@ -1,0 +1,141 @@
+[
+  {
+    "text": "I don't like eggs",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "eggs",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "search the recipe of meet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to cook something using raspberries but without using strawberries",
+    "entities": [
+      {
+        "start": 31,
+        "end": 42,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "strawberries",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 31,
+        "end": 42,
+        "confidence_entity": 0.8082886549948793,
+        "value": "raspberries",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 61,
+        "end": 73,
+        "confidence_entity": 0.9689500164676602,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I want to cook using potatoes and chicken",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "potatoes",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 34,
+        "end": 41,
+        "value": "chicken",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.3906076556448452,
+        "value": "potatoes",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 34,
+        "end": 41,
+        "confidence_entity": 0.44445208966962796,
+        "value": "chicken",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "search a recipe for pizza",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "pizza",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am looking for gluten free recipe\"",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.5730790606449335,
+        "value": "gluten",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "strudel",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

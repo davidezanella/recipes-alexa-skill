@@ -1,0 +1,34 @@
+[
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.2489113062620163
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.2953589856624603
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.339647501707077
+    }
+  },
+  {
+    "text": "i don't want either of those",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.17060139775276184
+    }
+  }
+]

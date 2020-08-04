@@ -1,0 +1,58 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.4125099778175354
+    }
+  },
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.9640285968780518
+    }
+  },
+  {
+    "text": "search a recipe for pizza",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.7261105179786682
+    }
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.3222140967845917
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.42919543385505676
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5275826454162598
+    }
+  },
+  {
+    "text": "go for it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.5609529614448547
+    }
+  }
+]

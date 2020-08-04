@@ -1,0 +1,68 @@
+{
+  "vegetarian": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "gluten_free": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "search_ingredients": {
+    "precision": 0.8,
+    "recall": 0.2857142857142857,
+    "f1-score": 0.4210526315789473,
+    "support": 14
+  },
+  "vegan": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "max_minutes": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5
+  },
+  "search_text": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "max_calories": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "avoid_ingredients": {
+    "precision": 0.5,
+    "recall": 0.2222222222222222,
+    "f1-score": 0.30769230769230765,
+    "support": 9
+  },
+  "micro avg": {
+    "precision": 0.9032258064516129,
+    "recall": 0.6086956521739131,
+    "f1-score": 0.7272727272727272,
+    "support": 46
+  },
+  "macro avg": {
+    "precision": 0.9125,
+    "recall": 0.7884920634920635,
+    "f1-score": 0.8272042285200181,
+    "support": 46
+  },
+  "weighted avg": {
+    "precision": 0.841304347826087,
+    "recall": 0.6086956521739131,
+    "f1-score": 0.6762698272995755,
+    "support": 46
+  }
+}

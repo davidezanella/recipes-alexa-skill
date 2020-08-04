@@ -1,0 +1,114 @@
+{
+  "start_cooking": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "get_recipe_ingredients": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "get_recipe_info": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "affirm": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1-score": 0.9411764705882353,
+    "support": 8,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "clear_search": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "get_recipe_nutrition": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "next_page": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "get_recipe_steps": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "get_recipe_info": 1
+    }
+  },
+  "next_step": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "affirm": 1
+    }
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "search_recipe": 1
+    }
+  },
+  "choose_recipe": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "search_recipe": {
+    "precision": 0.9629629629629629,
+    "recall": 0.9629629629629629,
+    "f1-score": 0.9629629629629629,
+    "support": 27,
+    "confused_with": {
+      "clear_search": 1
+    }
+  },
+  "accuracy": 0.9375,
+  "macro avg": {
+    "precision": 0.9373219373219374,
+    "recall": 0.904843304843305,
+    "f1-score": 0.9020278196748784,
+    "support": 64
+  },
+  "weighted avg": {
+    "precision": 0.9496527777777778,
+    "recall": 0.9375,
+    "f1-score": 0.9350081699346404,
+    "support": 64
+  }
+}

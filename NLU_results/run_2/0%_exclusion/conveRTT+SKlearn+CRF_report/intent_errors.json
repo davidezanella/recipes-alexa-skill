@@ -1,0 +1,26 @@
+[
+  {
+    "text": "hey",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.21008937835543182
+    }
+  },
+  {
+    "text": "How many calories does it have?",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.3894193871448579
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2632378206439466
+    }
+  }
+]

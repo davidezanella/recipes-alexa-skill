@@ -1,0 +1,58 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.38547446836650084
+    }
+  },
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.23642020723825707
+    }
+  },
+  {
+    "text": "search a recipe for pizza",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.335325698362953
+    }
+  },
+  {
+    "text": "Tell me more about it",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.24088332574076127
+    }
+  },
+  {
+    "text": "Tell me how can I make it",
+    "intent": "get_recipe_steps",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3089499141901138
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.20329837381575322
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.3510425051331775
+    }
+  }
+]

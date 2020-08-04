@@ -1,0 +1,143 @@
+[
+  {
+    "text": "what can i cook without using grapes or banana?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "grapes",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 40,
+        "end": 46,
+        "confidence_entity": 0.5473077579316501,
+        "value": "banana",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What can I cook gluten-free?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook something using carrots",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.7158727762257756,
+        "value": "carrots",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "give me some recipes to cook using mango",
+    "entities": [
+      {
+        "start": 35,
+        "end": 40,
+        "value": "mango",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 35,
+        "end": 40,
+        "confidence_entity": 0.7590491780434462,
+        "value": "mango",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want to cook a pie without using apples",
+    "entities": [
+      {
+        "start": 17,
+        "end": 20,
+        "value": "pie",
+        "entity": "search_text"
+      },
+      {
+        "start": 35,
+        "end": 41,
+        "value": "apples",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.41831288193387184,
+        "value": "apples",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "avoid recipes with chops",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "chops",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe where i can cook using cucumber",
+    "entities": [
+      {
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 37,
+        "end": 45,
+        "confidence_entity": 0.37513296341856184,
+        "value": "cucumber",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

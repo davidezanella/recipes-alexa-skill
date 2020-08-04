@@ -1,0 +1,74 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.6099897115688235
+    }
+  },
+  {
+    "text": "Tell me its calories",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.33404568100525067
+    }
+  },
+  {
+    "text": "How many calories does it have?",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.20759927455980626
+    }
+  },
+  {
+    "text": "I decided to prepare the second recipe",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.16326777738374293
+    }
+  },
+  {
+    "text": "Let's start!",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.20720405106804338
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.24294002285948754
+    }
+  },
+  {
+    "text": "Remove th previous filters",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.34748393428691693
+    }
+  },
+  {
+    "text": "Sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.1890266282073431
+    }
+  },
+  {
+    "text": "no you did it wrong",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3099500925372925
+    }
+  }
+]

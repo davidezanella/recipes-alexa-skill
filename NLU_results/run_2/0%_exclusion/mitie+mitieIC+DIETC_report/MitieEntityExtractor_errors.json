@@ -1,0 +1,58 @@
+[
+  {
+    "text": "hi",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "hi",
+        "start": 0,
+        "end": 2,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What can I cook gluten-free?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 27,
+        "value": "true",
+        "entity": "gluten_free"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gluten_free",
+        "value": "cook gluten-free",
+        "start": 11,
+        "end": 27,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "start": 16,
+        "end": 27,
+        "value": "gluten-free",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me its calories",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "max_calories",
+        "value": "its",
+        "start": 8,
+        "end": 11,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  }
+]

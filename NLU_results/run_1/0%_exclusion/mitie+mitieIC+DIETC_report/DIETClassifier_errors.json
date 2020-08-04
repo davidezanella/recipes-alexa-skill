@@ -1,0 +1,205 @@
+[
+  {
+    "text": "find a recipe where i can use strawberries but without salad",
+    "entities": [
+      {
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "strawberries",
+        "start": 30,
+        "end": 42,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "value": "salad",
+        "start": 55,
+        "end": 60,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook in thirty minutes?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 25,
+        "value": "thirty",
+        "entity": "max_minutes"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "max_minutes",
+        "value": "thirty",
+        "start": 19,
+        "end": 25,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook without using grapes or banana?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 36,
+        "value": "grapes",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "grapes",
+        "start": 30,
+        "end": 36,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "value": "banana",
+        "start": 40,
+        "end": 46,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 40,
+        "end": 46,
+        "value": "banana",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "dessert",
+        "start": 20,
+        "end": 27,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "value": "strawberries",
+        "start": 33,
+        "end": 45,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't like kiwi",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "kiwi",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "kiwi",
+        "start": 13,
+        "end": 17,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use red chilly",
+    "entities": [
+      {
+        "start": 32,
+        "end": 42,
+        "value": "red chilly",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "red",
+        "start": 32,
+        "end": 35,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      }
+    ]
+  }
+]
