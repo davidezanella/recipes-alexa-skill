@@ -1,4 +1,4 @@
-rasa==1.10.8
+rasa==1.10.10
 rasa[convert]
 git+https://github.com/mit-nlp/MITIE.git
 rasa[mitie]

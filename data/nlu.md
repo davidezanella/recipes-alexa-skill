@@ -65,7 +65,7 @@
 - find a recipe ready in [45](max_minutes) minutes
 - find a recipe ready in maximum [60](max_minutes) minutes
 #### gluten_free
-- I am looking for [gluten free]{"entity": "gluten_free", "value": "true"} recipe"
+- I am looking for [gluten free]{"entity": "gluten_free", "value": "true"} recipe
 - Tell me some recipe for a dish [without gluten]{"entity": "gluten_free", "value": "true"}
 - What can you suggest me to cook for [celiac]{"entity": "gluten_free", "value": "true"}?
 - What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
