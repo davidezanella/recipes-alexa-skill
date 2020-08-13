@@ -1,74 +1,98 @@
 [
   {
-    "text": "hi",
+    "text": "hey there",
     "intent": "greet",
     "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.6099897115688235
+      "name": "affirm",
+      "confidence": 0.5677214943063669
     }
   },
   {
-    "text": "Tell me its calories",
-    "intent": "get_recipe_nutrition",
+    "text": "more recipes please",
+    "intent": "next_page",
     "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.33404568100525067
+      "name": "search_recipe",
+      "confidence": 0.714184625495365
     }
   },
   {
-    "text": "How many calories does it have?",
-    "intent": "get_recipe_nutrition",
+    "text": "Alternatives?",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "get_recipe_nutrition",
+      "confidence": 0.17163148494705474
+    }
+  },
+  {
+    "text": "Tell me more about it",
+    "intent": "get_recipe_info",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.20759927455980626
+      "confidence": 0.2786775422845432
     }
   },
   {
-    "text": "I decided to prepare the second recipe",
-    "intent": "start_cooking",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.16326777738374293
-    }
-  },
-  {
-    "text": "Let's start!",
-    "intent": "start_cooking",
-    "intent_prediction": {
-      "name": "next_step",
-      "confidence": 0.20720405106804338
-    }
-  },
-  {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.24294002285948754
+      "name": "search_recipe",
+      "confidence": 0.2798118944215947
     }
   },
   {
-    "text": "Remove th previous filters",
+    "text": "I want to search another recipe",
     "intent": "clear_search",
     "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.34748393428691693
+      "confidence": 0.42206108272718046
     }
   },
   {
     "text": "Sure",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.1890266282073431
+      "name": "next_page",
+      "confidence": 0.19710967301983914
     }
   },
   {
-    "text": "no you did it wrong",
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5279053481460143
+    }
+  },
+  {
+    "text": "i will!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2337848793994332
+    }
+  },
+  {
+    "text": "I'm sure I will!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.21014521694505922
+    }
+  },
+  {
+    "text": "No, not really.",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.2619112881978041
+    }
+  },
+  {
+    "text": "deny",
     "intent": "deny",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.3099500925372925
+      "confidence": 0.6036857905963198
     }
   }
 ]

@@ -1,34 +1,34 @@
 [
   {
-    "text": "Talk about the nutrition",
-    "intent": "get_recipe_nutrition",
+    "text": "I don't like them",
+    "intent": "next_page",
     "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.26147337706902035
+      "name": "deny",
+      "confidence": 0.4318895328531589
     }
   },
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "OK, I'm ready to start",
+    "intent": "start_cooking",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.20458857938592784
+      "name": "next_step",
+      "confidence": 0.6413992688099268
     }
   },
   {
-    "text": "I'm ready",
+    "text": "Let's start!",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.37197121973379776
+    }
+  },
+  {
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.4019466846979548
-    }
-  },
-  {
-    "text": "I want to search another recipe",
-    "intent": "clear_search",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.35467768195347016
+      "name": "get_recipe_info",
+      "confidence": 0.2798988106545896
     }
   }
 ]

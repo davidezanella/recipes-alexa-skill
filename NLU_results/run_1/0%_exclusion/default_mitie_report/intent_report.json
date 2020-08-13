@@ -1,22 +1,12 @@
 {
-  "start_cooking": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3,
-    "confused_with": {
-      "get_recipe_ingredients": 2,
-      "next_step": 1
-    }
-  },
   "get_recipe_ingredients": {
-    "precision": 0.6,
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.7499999999999999,
+    "f1-score": 1.0,
     "support": 3,
     "confused_with": {}
   },
-  "get_recipe_info": {
+  "greet": {
     "precision": 1.0,
     "recall": 0.5,
     "f1-score": 0.6666666666666666,
@@ -25,79 +15,48 @@
       "affirm": 1
     }
   },
-  "affirm": {
-    "precision": 0.6666666666666666,
-    "recall": 0.75,
-    "f1-score": 0.7058823529411765,
-    "support": 8,
-    "confused_with": {
-      "greet": 1,
-      "deny": 1
-    }
-  },
-  "greet": {
-    "precision": 0.5,
-    "recall": 0.5,
-    "f1-score": 0.5,
-    "support": 2,
-    "confused_with": {
-      "search_recipe": 1
-    }
-  },
-  "clear_search": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 2,
-    "confused_with": {
-      "search_recipe": 1
-    }
-  },
-  "get_recipe_nutrition": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 2,
-    "confused_with": {
-      "next_page": 1
-    }
-  },
   "next_page": {
-    "precision": 0.75,
+    "precision": 1.0,
     "recall": 0.75,
-    "f1-score": 0.75,
+    "f1-score": 0.8571428571428571,
     "support": 4,
     "confused_with": {
       "search_recipe": 1
     }
   },
-  "get_recipe_steps": {
+  "start_cooking": {
     "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 2,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 3,
     "confused_with": {
+      "next_step": 1,
       "affirm": 1
     }
   },
-  "next_step": {
-    "precision": 0.5,
-    "recall": 0.5,
-    "f1-score": 0.5,
+  "get_recipe_info": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 2,
     "confused_with": {
-      "start_cooking": 1
+      "get_recipe_steps": 1,
+      "affirm": 1
     }
   },
-  "deny": {
+  "get_recipe_steps": {
     "precision": 0.6666666666666666,
-    "recall": 0.4,
-    "f1-score": 0.5,
-    "support": 5,
-    "confused_with": {
-      "search_recipe": 2,
-      "affirm": 1
-    }
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "search_recipe": {
+    "precision": 0.9642857142857143,
+    "recall": 1.0,
+    "f1-score": 0.9818181818181818,
+    "support": 27,
+    "confused_with": {}
   },
   "choose_recipe": {
     "precision": 1.0,
@@ -106,24 +65,56 @@
     "support": 2,
     "confused_with": {}
   },
-  "search_recipe": {
-    "precision": 0.84375,
+  "clear_search": {
+    "precision": 1.0,
     "recall": 1.0,
-    "f1-score": 0.9152542372881356,
-    "support": 27,
+    "f1-score": 1.0,
+    "support": 2,
     "confused_with": {}
   },
-  "accuracy": 0.765625,
+  "next_step": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 2,
+    "confused_with": {
+      "affirm": 1
+    }
+  },
+  "get_recipe_nutrition": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "affirm": {
+    "precision": 0.6153846153846154,
+    "recall": 1.0,
+    "f1-score": 0.761904761904762,
+    "support": 8,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "affirm": 1
+    }
+  },
+  "accuracy": 0.875,
   "macro avg": {
-    "precision": 0.7328525641025642,
-    "recall": 0.6076923076923078,
-    "f1-score": 0.6375233274535368,
+    "precision": 0.8266413074105382,
+    "recall": 0.7602564102564102,
+    "f1-score": 0.7658785658785661,
     "support": 64
   },
   "weighted avg": {
-    "precision": 0.7538736979166667,
-    "recall": 0.765625,
-    "f1-score": 0.7412852588069125,
+    "precision": 0.8795644459706959,
+    "recall": 0.875,
+    "f1-score": 0.857979347041847,
     "support": 64
   }
 }

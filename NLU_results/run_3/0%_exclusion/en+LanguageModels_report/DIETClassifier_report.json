@@ -1,40 +1,4 @@
 {
-  "vegan": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4
-  },
-  "vegetarian": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5
-  },
-  "search_ingredients": {
-    "precision": 0.5,
-    "recall": 0.5,
-    "f1-score": 0.5,
-    "support": 12
-  },
-  "gluten_free": {
-    "precision": 0.8888888888888888,
-    "recall": 1.0,
-    "f1-score": 0.9411764705882353,
-    "support": 8
-  },
-  "max_minutes": {
-    "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
-    "support": 2
-  },
-  "search_text": {
-    "precision": 1.0,
-    "recall": 0.2,
-    "f1-score": 0.33333333333333337,
-    "support": 5
-  },
   "max_calories": {
     "precision": 1.0,
     "recall": 1.0,
@@ -42,27 +6,63 @@
     "support": 1
   },
   "avoid_ingredients": {
-    "precision": 0.45454545454545453,
-    "recall": 0.4166666666666667,
-    "f1-score": 0.43478260869565216,
-    "support": 12
+    "precision": 0.125,
+    "recall": 0.0625,
+    "f1-score": 0.08333333333333333,
+    "support": 16
+  },
+  "gluten_free": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "search_text": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5
+  },
+  "vegetarian": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "max_minutes": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "search_ingredients": {
+    "precision": 0.4444444444444444,
+    "recall": 0.5,
+    "f1-score": 0.47058823529411764,
+    "support": 16
+  },
+  "vegan": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
   },
   "micro avg": {
-    "precision": 0.7045454545454546,
-    "recall": 0.6326530612244898,
-    "f1-score": 0.6666666666666666,
-    "support": 49
+    "precision": 0.5365853658536586,
+    "recall": 0.44,
+    "f1-score": 0.4835164835164836,
+    "support": 50
   },
   "macro avg": {
-    "precision": 0.8554292929292929,
-    "recall": 0.7020833333333334,
-    "f1-score": 0.734494884910486,
-    "support": 49
+    "precision": 0.6961805555555556,
+    "recall": 0.6953125,
+    "f1-score": 0.6942401960784313,
+    "support": 50
   },
   "weighted avg": {
-    "precision": 0.7258297258297258,
-    "recall": 0.6326530612244898,
-    "f1-score": 0.6478939401847696,
-    "support": 49
+    "precision": 0.44222222222222224,
+    "recall": 0.44,
+    "f1-score": 0.4372549019607843,
+    "support": 50
   }
 }

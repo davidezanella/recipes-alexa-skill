@@ -1,95 +1,117 @@
 [
   {
-    "text": "find a recipe where i can use strawberries but without salad",
+    "text": "I have some radish what can i prepare?",
     "entities": [
       {
-        "start": 30,
-        "end": 42,
-        "value": "strawberries",
+        "start": 12,
+        "end": 18,
+        "value": "radish",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avoid recipes with crab",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "crab",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need a recipe where i can use cardamom",
+    "entities": [
+      {
+        "start": 32,
+        "end": 40,
+        "value": "cardamom",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avoid recipes with lamb",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "lamb",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need the recipe of muffins",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "muffins",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
         "entity": "search_ingredients"
       },
       {
-        "start": 55,
-        "end": 60,
-        "value": "salad",
-        "entity": "avoid_ingredients"
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
+        "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "search_ingredients",
-        "start": 30,
-        "end": 37,
-        "confidence_entity": 0.40310101462370107,
-        "value": "strawbe",
-        "extractor": "CRFEntityExtractor"
-      },
-      {
-        "entity": "search_ingredients",
-        "start": 55,
-        "end": 60,
-        "confidence_entity": 0.5517781124802512,
-        "value": "salad",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.6288392034713214,
+        "value": "cabbage",
         "extractor": "CRFEntityExtractor"
       }
     ]
   },
   {
-    "text": "I want something without coconut",
+    "text": "i don't want recipes with bacon",
     "entities": [
       {
-        "start": 25,
-        "end": 32,
-        "value": "coconut",
+        "start": 26,
+        "end": 31,
+        "value": "bacon",
         "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "search recipes to use zucchini",
+    "text": "i need a recipe where i can use mint",
     "entities": [
       {
-        "start": 22,
-        "end": 30,
-        "value": "zucchini",
+        "start": 32,
+        "end": 36,
+        "value": "mint",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "what can i cook in thirty minutes?",
-    "entities": [
-      {
-        "start": 19,
-        "end": 25,
-        "value": "thirty",
-        "entity": "max_minutes"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "what can i cook without using grapes or banana?",
-    "entities": [
-      {
-        "start": 30,
-        "end": 36,
-        "value": "grapes",
-        "entity": "avoid_ingredients"
-      },
-      {
-        "start": 40,
-        "end": 46,
-        "value": "banana",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "find a recipe for a dessert with strawberries",
+    "text": "find a recipe for a dessert without strawberries",
     "entities": [
       {
         "start": 20,
@@ -98,10 +120,10 @@
         "entity": "search_text"
       },
       {
-        "start": 33,
-        "end": 45,
+        "start": 36,
+        "end": 48,
         "value": "strawberries",
-        "entity": "search_ingredients"
+        "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": [
@@ -109,64 +131,40 @@
         "entity": "search_text",
         "start": 20,
         "end": 27,
-        "confidence_entity": 0.808378450973512,
+        "confidence_entity": 0.84635172296072,
         "value": "dessert",
         "extractor": "CRFEntityExtractor"
       },
       {
-        "entity": "avoid_ingredients",
-        "start": 33,
-        "end": 45,
-        "confidence_entity": 0.6347752590097502,
+        "entity": "search_ingredients",
+        "start": 36,
+        "end": 48,
+        "confidence_entity": 0.7320295711210081,
         "value": "strawberries",
         "extractor": "CRFEntityExtractor"
       }
     ]
   },
   {
-    "text": "I don't like kiwi",
+    "text": "I want to cook something using acacia",
     "entities": [
       {
-        "start": 13,
-        "end": 17,
-        "value": "kiwi",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "i need a recipe where i can use red chilly",
-    "entities": [
-      {
-        "start": 32,
-        "end": 42,
-        "value": "red chilly",
+        "start": 31,
+        "end": 37,
+        "value": "acacia",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "search recipes to use milk",
+    "text": "find a recipe where i can cook using parsley",
     "entities": [
       {
-        "start": 22,
-        "end": 26,
-        "value": "milk",
+        "start": 37,
+        "end": 44,
+        "value": "parsley",
         "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "what can i cook without cane sugar?",
-    "entities": [
-      {
-        "start": 24,
-        "end": 34,
-        "value": "cane sugar",
-        "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": []

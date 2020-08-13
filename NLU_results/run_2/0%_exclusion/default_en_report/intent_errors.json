@@ -1,26 +1,18 @@
 [
   {
-    "text": "Tell me its calories",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.6323803067207336
-    }
-  },
-  {
-    "text": "How many calories does it have?",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.9873613119125366
-    }
-  },
-  {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.43598562479019165
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
       "name": "next_page",
-      "confidence": 0.25868484377861023
+      "confidence": 0.8779633045196533
     }
   }
 ]

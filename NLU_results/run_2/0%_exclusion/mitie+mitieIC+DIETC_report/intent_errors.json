@@ -1,50 +1,66 @@
 [
   {
-    "text": "hey",
-    "intent": "greet",
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.7840787768363953
+    }
+  },
+  {
+    "text": "Alternatives?",
+    "intent": "next_page",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.9344084858894348
+      "confidence": 0.6570830345153809
     }
   },
   {
-    "text": "hi",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.8952418565750122
-    }
-  },
-  {
-    "text": "Tell me its calories",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.9879316091537476
-    }
-  },
-  {
-    "text": "How many calories does it have?",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.9547484517097473
-    }
-  },
-  {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.4560193717479706
+      "name": "search_recipe",
+      "confidence": 0.7513088583946228
     }
   },
   {
-    "text": "Remove th previous filters",
+    "text": "I want to search another recipe",
     "intent": "clear_search",
     "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.8534572124481201
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9499828219413757
+    }
+  },
+  {
+    "text": "i will!",
+    "intent": "affirm",
+    "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.7649142146110535
+      "confidence": 0.9895266890525818
+    }
+  },
+  {
+    "text": "I'm sure I will!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "get_recipe_steps",
+      "confidence": 0.32251977920532227
+    }
+  },
+  {
+    "text": "deny",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9416371583938599
     }
   }
 ]

@@ -1,50 +1,106 @@
 [
   {
-    "text": "hi",
+    "text": "good morning",
     "intent": "greet",
     "intent_prediction": {
-      "name": "choose_recipe",
-      "confidence": 0.1331624835729599
+      "name": "next_page",
+      "confidence": 0.33177170157432556
     }
   },
   {
-    "text": "what about the second one?",
-    "intent": "choose_recipe",
+    "text": "find a recipe without honey",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.2964871823787689
+    }
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.3087400794029236
+    }
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.2525036036968231
+    }
+  },
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.4338107109069824
+    }
+  },
+  {
+    "text": "Alternatives?",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.14041703939437866
+    }
+  },
+  {
+    "text": "Describe the steps",
+    "intent": "get_recipe_steps",
     "intent_prediction": {
       "name": "get_recipe_info",
-      "confidence": 0.6353191137313843
+      "confidence": 0.6878107190132141
     }
   },
   {
-    "text": "Tell me its calories",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "get_recipe_steps",
-      "confidence": 0.24668075144290924
-    }
-  },
-  {
-    "text": "How many calories does it have?",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "get_recipe_steps",
-      "confidence": 0.20345214009284973
-    }
-  },
-  {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.25116658210754395
+      "name": "affirm",
+      "confidence": 0.8637011051177979
     }
   },
   {
-    "text": "alright",
-    "intent": "affirm",
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
     "intent_prediction": {
       "name": "next_page",
-      "confidence": 0.1425083577632904
+      "confidence": 0.8736220002174377
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.32999834418296814
+    }
+  },
+  {
+    "text": "i will!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.16320770978927612
+    }
+  },
+  {
+    "text": "great",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.15935662388801575
+    }
+  },
+  {
+    "text": "deny",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.15974269807338715
     }
   }
 ]

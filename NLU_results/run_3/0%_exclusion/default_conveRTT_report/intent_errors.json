@@ -1,18 +1,58 @@
 [
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "what about the second one?",
+    "intent": "choose_recipe",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.285952627658844
+      "name": "get_recipe_info",
+      "confidence": 0.3200112283229828
+    }
+  },
+  {
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_ingredients",
+      "confidence": 0.22836315631866455
+    }
+  },
+  {
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.23859064280986786
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7449113130569458
     }
   },
   {
     "text": "I've done",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.14728431403636932
+      "name": "affirm",
+      "confidence": 0.1892821341753006
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.404531329870224
+    }
+  },
+  {
+    "text": "never mind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.19903165102005005
     }
   }
 ]

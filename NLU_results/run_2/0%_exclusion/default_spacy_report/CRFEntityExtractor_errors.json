@@ -1,0 +1,112 @@
+[
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.7057866864632184,
+        "value": "dessert",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "confidence_entity": 0.898708769878072,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "strudel",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what can i cook in fifty minutes?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "fifty",
+        "entity": "max_minutes"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "search the recipe of meet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.7604338454736506,
+        "value": "cabbage",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

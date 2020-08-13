@@ -1,90 +1,66 @@
 [
   {
-    "text": "good morning",
-    "intent": "greet",
+    "text": "find another recipe",
+    "intent": "next_page",
     "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.49752289056777954
+      "name": "choose_recipe",
+      "confidence": 0.4808506667613983
     }
   },
   {
-    "text": "hi",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.1593489795923233
-    }
-  },
-  {
-    "text": "I don't like kiwi",
-    "intent": "search_recipe",
+    "text": "I don't like them",
+    "intent": "next_page",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.5900798439979553
+      "confidence": 0.20842085778713226
     }
   },
   {
-    "text": "Tell me more about it",
-    "intent": "get_recipe_info",
+    "text": "Find another one",
+    "intent": "next_page",
     "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.47857198119163513
+      "name": "choose_recipe",
+      "confidence": 0.6094903945922852
     }
   },
   {
-    "text": "Describe the steps",
-    "intent": "get_recipe_steps",
-    "intent_prediction": {
-      "name": "get_recipe_info",
-      "confidence": 0.6034846901893616
-    }
-  },
-  {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
-    "intent_prediction": {
-      "name": "get_recipe_nutrition",
-      "confidence": 0.26524993777275085
-    }
-  },
-  {
-    "text": "I'm ready",
-    "intent": "next_step",
-    "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.4023929536342621
-    }
-  },
-  {
-    "text": "I want to search another recipe",
-    "intent": "clear_search",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.7755554914474487
-    }
-  },
-  {
-    "text": "go for it",
-    "intent": "affirm",
+    "text": "OK, I'm ready to start",
+    "intent": "start_cooking",
     "intent_prediction": {
       "name": "next_step",
-      "confidence": 0.42843174934387207
+      "confidence": 0.7961375713348389
     }
   },
   {
-    "text": "absolutely",
+    "text": "Go on",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.20512032508850098
+    }
+  },
+  {
+    "text": "amazing",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5528947114944458
+      "name": "search_recipe",
+      "confidence": 0.2261059433221817
     }
   },
   {
-    "text": "neither of these",
-    "intent": "deny",
+    "text": "perfect",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.2388710081577301
+      "name": "search_recipe",
+      "confidence": 0.23436130583286285
+    }
+  },
+  {
+    "text": "amazing!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.2261059433221817
     }
   }
 ]

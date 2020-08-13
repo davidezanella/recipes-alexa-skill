@@ -1,34 +1,42 @@
 [
   {
-    "text": "search the recipe of meet",
-    "intent": "search_recipe",
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
     "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.2489113062620163
+      "name": "get_recipe_info",
+      "confidence": 0.5303890109062195
     }
   },
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
     "intent_prediction": {
-      "name": "get_recipe_info",
-      "confidence": 0.2953589856624603
+      "name": "get_recipe_nutrition",
+      "confidence": 0.2730647921562195
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6766685843467712
     }
   },
   {
     "text": "I've done",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.339647501707077
+      "name": "deny",
+      "confidence": 0.2872653305530548
     }
   },
   {
-    "text": "i don't want either of those",
-    "intent": "deny",
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
     "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.17060139775276184
+      "name": "next_page",
+      "confidence": 0.858284592628479
     }
   }
 ]

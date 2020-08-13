@@ -1,266 +1,266 @@
 ## intent:greet
-- good evening
-- hello
 - hey there
+- good morning
+- hi
 - hey
 
 ## intent:search_recipe
-- what can i cook without [cane sugar](avoid_ingredients)?
-- What can you suggest me to cook for [vegetarian]{"entity": "vegetarian", "value": "true"}?
-- I don't have any [pers](avoid_ingredients)
-- find some [vegetarian]{"entity": "vegetarian", "value": "true"} recipes
-- I have some [onions](search_ingredients) what can i cook?
-- i should assume only [150](max_calories) calories
-- i want to cook [vegetarian]{"entity": "vegetarian", "value": "true"}
-- search some recipes with maximum [175](max_calories) calories
-- I want to cook using [corn](search_ingredients) and [broccoli](search_ingredients)
-- i want to cook something for [vegans]{"entity": "vegan", "value": "true"} using [strawberries](search_ingredients)
-- search recipes to use [zucchini](search_ingredients)
-- what can i cook for [vegans]{"entity": "vegan", "value": "true"}?
-- I would like to prepare a [dessert](search_text)
-- I want something without [peppers](avoid_ingredients)
-- i need some recipes for [vegan]{"entity": "vegan", "value": "true"}
-- i would like to cook the [spaghetti](search_text)
-- search recipes to use [milk](search_ingredients)
+- I want to cook something using [carrots](search_ingredients)
+- I don't want [eggs](avoid_ingredients) or [chicken](avoid_ingredients)
+- recipes with maximum [170](max_calories) calories?
+- find some dishes for [vegetarians]{"entity": "vegetarian", "value": "true"}
+- i want a recipe with maximum [300](max_calories) calories but i have only [25](max_minutes) minutes
+- i need a recipe where i can use [salt](search_ingredients)
+- i need a recipe ready in [70](max_minutes) minutes with maximum [140](max_calories) calories
+- what can i cook in [thirty](max_minutes) minutes?
 - What can I cook with maximum [150](max_calories) calories?
-- What can you suggest me to cook for [celiac]{"entity": "gluten_free", "value": "true"}?
-- find a recipe where i can cook using [cucumber](search_ingredients)
-- i don't want recipes with [potatoes](avoid_ingredients)
-- i need the recipe of [muffins](search_text)
+- find a recipe for a [dessert](search_text) with [strawberries](search_ingredients)
+- find a recipe ready in [45](max_minutes) minutes
+- what can i cook for [vegans]{"entity": "vegan", "value": "true"}?
+- search the recipe of [meet](search_text)
+- find the recipe of the [strudel](search_text)
+- I want to cook something but I have only [40](max_minutes) minutes
+- search a recipe for [pizza](search_text)
+- find some [vegan]{"entity": "vegan", "value": "true"} recipes
+- I don't have any [eggs](avoid_ingredients)
+- What can I prepare [gluten free]{"entity": "gluten_free", "value": "true"}?
+- find a recipe for [vegetarians]{"entity": "vegetarian", "value": "true"}
+- What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
+- what can i cook without using [apricots](avoid_ingredients)?
+- i need a recipe where i can use [sugar](search_ingredients)
+- I have some [cinnamon](search_ingredients) what can i prepare?
+- I have some [garlic](search_ingredients) what can i prepare?
+- what can i cook in [60](max_minutes) minutes with [200](max_calories) calories
+- I want to cook something with maximum [200](max_calories) calories
+- i can assume only [270](max_calories) calories
+- avoid recipes with [tomatoes](avoid_ingredients)
+- I don't like [kiwi](avoid_ingredients)
+- i need a recipe with only [168](max_calories) calories
+- find a recipe ready in maximum [60](max_minutes) minutes
+- I have only [40](max_minutes) minutes what can I cook?
 - Search recipes [without gluten]{"entity": "gluten_free", "value": "true"}
 - i want to cook something for [vegetarians]{"entity": "vegetarian", "value": "true"} using [strawberries](search_ingredients)
-- i need a [vegan]{"entity": "vegan", "value": "true"} recipe
-- i need a recipe where i can use [salt](search_ingredients)
-- avoid recipes with [chops](avoid_ingredients)
-- i need a recipe where i can use [mint](search_ingredients)
+- i need a recipe where i can use [red chilly](search_ingredients)
+- I want to cook something using [acacia](search_ingredients)
+- find a recipe for a [dessert](search_text) without [strawberries](avoid_ingredients)
+- i have to prepare some [vegan]{"entity": "vegan", "value": "true"} dishes
 - I have some [peppers](search_ingredients) what can i cook?
-- what can i cook in [30](max_minutes) minutes?
-- what can i cook for [dessert](search_text)?
-- find a recipe ready in [45](max_minutes) minutes
-- I want to cook something but I have only [40](max_minutes) minutes
-- avoid recipes with [lamb](avoid_ingredients)
-- I don't like [kiwi](avoid_ingredients)
-- i want to cook [vegan]{"entity": "vegan", "value": "true"}
+- i want to cook [vegetarian]{"entity": "vegetarian", "value": "true"}
+- What can i cook using [basil](search_ingredients)?
+- I want to cook something using [mushrooms](search_ingredients)
+- Tell me some recipe for a dish [without gluten]{"entity": "gluten_free", "value": "true"}
+- I am looking for [gluten free]{"entity": "gluten_free", "value": "true"} recipe
+- search recipes to use [milk](search_ingredients)
+- find a recipe for [vegetarians]{"entity": "vegetarian", "value": "true"} where i can use [salad](search_ingredients)
+- fid some recipes for [vegan]{"entity": "vegan", "value": "true"}
+- What can you suggest me to cook for [vegan]{"entity": "vegan", "value": "true"}?
+- i want to cook a [pie](search_text) without using [apples](avoid_ingredients)
+- what can i cook without [cane sugar](avoid_ingredients)?
+- what can i cook without using [carrots](avoid_ingredients) or [potatoes](avoid_ingredients)?
+- find a recipe without [cucumber](avoid_ingredients)
+- find a recipe that i can prepare in [45](max_minutes) minutes
+- find some [vegetarian]{"entity": "vegetarian", "value": "true"} recipes
+- give me some recipes to cook using [salad](search_ingredients)
+- Find a recipe for [celiac]{"entity": "gluten_free", "value": "true"}
+- what can i cook without using [grapes](avoid_ingredients) or [banana](avoid_ingredients)?
+- I have some [radish](search_ingredients) what can i prepare?
+- search some recipes with maximum [175](max_calories) calories
+- what can i cook in [60](max_minutes) minutes?
+- I don't like [eggs](avoid_ingredients)
+- what can i cook without [cherry](avoid_ingredients)?
+- i should assume only [150](max_calories) calories
+- i need some recipes for [vegan]{"entity": "vegan", "value": "true"}
+- search recipes to use [zucchini](search_ingredients)
+- I have [50](max_minutes) minutes what can I prepare?
+- find a recipe [without gluten]{"entity": "gluten_free", "value": "true"} where i can use [salad](search_ingredients)
 - find some recipes for [vegetarians]{"entity": "vegetarian", "value": "true"}
-- What can I cook [gluten-free]{"entity": "gluten_free", "value": "true"}?
+- i want to cook [vegan]{"entity": "vegan", "value": "true"}
+- what can i cook for [dessert](search_text)?
+- i want to cook something [gluten-free]{"entity": "gluten_free", "value": "true"} but using [strawberries](search_ingredients)
+- i need some [vegan]{"entity": "vegan", "value": "true"} recipes
+- I want to cook using [corn](search_ingredients) and [broccoli](search_ingredients)
+- find a recipe for [vegan]{"entity": "vegan", "value": "true"} where i can use [salad](search_ingredients)
+- i need a recipe with maximum [150](max_calories) calories
+- I need a recipe [without gluten]{"entity": "gluten_free", "value": "true"}
+- Find a recipe [without gluten]{"entity": "gluten_free", "value": "true"}
+- the recipe of the [carrots pie](search_text)?
+- I want to cook using [potatoes](search_ingredients) and [chicken](search_ingredients)
+- find a recipe with maximum [170](max_calories) calories
+- what can i cook without [eggs](avoid_ingredients)?
+- search for [vegan]{"entity": "vegan", "value": "true"} recipes
+- give me some recipes to cook using [mango](search_ingredients)
+- I don't have any [sultana](avoid_ingredients)
+- i want to cook something using [raspberries](search_ingredients) but without using [strawberries](avoid_ingredients)
 - i need some recipes ready in [30](max_minutes) minutes and maximum [20](max_calories) calories
 - What can I cook with only [100](max_calories) calories?
-- I have only [40](max_minutes) minutes what can I cook?
-- I don't want [mango](avoid_ingredients) or [watermelon](avoid_ingredients)
-- i can assume only [270](max_calories) calories
-- I don't want [eggs](avoid_ingredients) or [chicken](avoid_ingredients)
-- i want the recipe of [lasagna](search_text)
-- avoid recipes with [crab](avoid_ingredients)
-- What can i cook using [beef](search_ingredients)?
-- i need a recipe where i can use [cardamom](search_ingredients)
-- what can i cook in [60](max_minutes) minutes with [200](max_calories) calories
-- I have some [cinnamon](search_ingredients) what can i prepare?
-- i want to cook something [gluten-free]{"entity": "gluten_free", "value": "true"} but using [strawberries](search_ingredients)
-- I want something without [apple](avoid_ingredients)
-- i have to prepare some [vegan]{"entity": "vegan", "value": "true"} dishes
-- what can i cook without using [caramel](avoid_ingredients)?
-- find a recipe ready in maximum [60](max_minutes) minutes
+- i need a recipe where i can use [mint](search_ingredients)
+- I would like to prepare a [dessert](search_text)
+- What can you suggest me to cook for [vegetarian]{"entity": "vegetarian", "value": "true"}?
 - find a recipe where i can cook using [parsley](search_ingredients)
-- I have [30](max_minutes) minutes what can I prepare?
-- fid some recipes for [vegan]{"entity": "vegan", "value": "true"}
-- find a recipe where i can use [strawberries](search_ingredients) but without [salad](avoid_ingredients)
-- find a recipe that i can prepare in [45](max_minutes) minutes
-- I have some [radish](search_ingredients) what can i prepare?
-- I want to cook using [cabbage](search_ingredients) and [eggplant](search_ingredients)
-- find a recipe for [vegetarians]{"entity": "vegetarian", "value": "true"}
 - i need dishes [vegetarians]{"entity": "vegetarian", "value": "true"}
+- avoid recipes with [crab](avoid_ingredients)
+- I have some [onions](search_ingredients) what can i cook?
 - i want to cook the [angel pie](search_text)
+- avoid recipes with [chops](avoid_ingredients)
+- What can I cook [gluten-free]{"entity": "gluten_free", "value": "true"}?
+- I want to cook using [cabbage](search_ingredients) and [eggplant](search_ingredients)
+- i need a recipe where i can use [cardamom](search_ingredients)
 - what can i cook without using [lemons](avoid_ingredients)?
-- find a recipe for a [dessert](search_text) with [strawberries](search_ingredients)
-- find some [vegan]{"entity": "vegan", "value": "true"} recipes
-- what can i cook without using [grapes](avoid_ingredients) or [banana](avoid_ingredients)?
-- i want to cook a [pie](search_text) without using [apples](avoid_ingredients)
-- I have some [eggs](search_ingredients) what can i prepare?
-- I want to cook something using [acacia](search_ingredients)
-- the recipe of the [carrots pie](search_text)?
-- i need a recipe with only [168](max_calories) calories
-- What can you suggest me to cook for [vegan]{"entity": "vegan", "value": "true"}?
-- i need a recipe where i can use [red chilly](search_ingredients)
-- what can i cook in [60](max_minutes) minutes and maximum [200](max_calories) calories
-- What can I prepare [gluten free]{"entity": "gluten_free", "value": "true"}?
-- I want to cook something with maximum [200](max_calories) calories
-- find a recipe for a [cake](search_text) where i can use [raspberries](search_ingredients)
-- Find a recipe for [celiac]{"entity": "gluten_free", "value": "true"}
-- Tell me some recipe for a dish [without gluten]{"entity": "gluten_free", "value": "true"}
-- i want a recipe with maximum [300](max_calories) calories but i have only [25](max_minutes) minutes
-- i need to cook for [vegetarians]{"entity": "vegetarian", "value": "true"}
-- find a recipe [without gluten]{"entity": "gluten_free", "value": "true"} where i can use [salad](search_ingredients)
-- what can i cook without using [carrots](avoid_ingredients) or [potatoes](avoid_ingredients)?
-- I want to cook something using [mushrooms](search_ingredients)
-- find a recipe with maximum [170](max_calories) calories
-- I have [50](max_minutes) minutes what can I prepare?
-- find a recipe without [honey](avoid_ingredients)
-- What can you suggest me to prepare [without gluten]{"entity": "gluten_free", "value": "true"}?
-- find a recipe for a [dessert](search_text) without [strawberries](avoid_ingredients)
-- avoid recipes with [peach](avoid_ingredients)
-- give me some recipes to cook using [mango](search_ingredients)
-- i need a recipe with maximum [150](max_calories) calories
-- i need a recipe ready in [70](max_minutes) minutes with maximum [140](max_calories) calories
-- I need a recipe [without gluten]{"entity": "gluten_free", "value": "true"}
-- what can i cook in [thirty](max_minutes) minutes?
-- find some dishes for [vegetarians]{"entity": "vegetarian", "value": "true"}
-- I don't have any [sultana](avoid_ingredients)
-- i need some [vegan]{"entity": "vegan", "value": "true"} recipes
-- What can i cook using [basil](search_ingredients)?
-- what can i cook without using [apricots](avoid_ingredients)?
-- give me some recipes to cook using [salad](search_ingredients)
-- What can i cook using [avocado](search_ingredients)?
+- what can i cook in [fifty](max_minutes) minutes?
+- I want something without [apple](avoid_ingredients)
+- i need a [vegan]{"entity": "vegan", "value": "true"} recipe
+- i need the recipe of [muffins](search_text)
 
 ## intent:next_page
-- more recipes please
+- search others
+- Find another one
+- I don't like them
+- Search more
 - Other possibilities?
 - find another recipe
-- I don't like them
-- Find others
-- Search more
-- search more recipes
-- Find another one
-- Find again
 - Are there others?
-- find other recipes
-- search others
+- search more recipes
+- search other recipes
+- other recipes?
+- Find again
+- other options?
 - Any other?
 - Alternatives?
 
 ## intent:choose_recipe
+- the third one
+- the first one
 - the first recipe
-- what about the forth recipe?
-- I like the first recipe
-- what about the second one?
+- the last one
 - the second one
 - I like the second recipe
-- the last one
-- the third one
+- I like the second one
+- I like the first recipe
 
 ## intent:get_recipe_info
-- Tell me about the first one
-- Describe the second recipe
-- How much time does the second recipe need?
-- Explain it better
-- Give details about the second one
 - I want details about the first recipe
-- Tell me the details
+- How much time does the second recipe need?
+- Give details about the second one
+- Explain it better
+- Describe the second recipe
+- How much time needed?
 - Describe it
+- Tell me more about it
 
 ## intent:get_recipe_ingredients
-- the ingredients for the second one?
-- What are the ingredients for the second one?
-- Ingredients needed?
-- What are its ingredients?
-- Its ingredients?
-- Tell me the ingredients needed by the first one
-- tell me about the ingredients required
-- What do I need for the first recipe?
 - tell me the ingredients of the third one
+- What are its ingredients?
+- What are the ingredients?
+- Ingredients needed?
 - tell me about the ingredients required by the third one
+- Explain the ingredients
 - Tell me the ingredients
+- Its ingredients?
+- tell me about the ingredients required
+- Tell me the ingredients needed by the first one
+- Explain the ingredients needed for the first one
 
 ## intent:get_recipe_nutrition
-- What about the nutrition info of the second recipe?
-- Talk about the nutrition
-- Tell me about the nutrition info
-- How many calories does it have?
-- What are the nutrition values?
 - Tell me its nutrition
+- What about the nutrition info of the second recipe?
+- Tell me about the nutrition info
+- What are the nutrition values?
+- Tell me the nutrition info of the first one
+- How many calories does it have?
 
 ## intent:get_recipe_steps
-- Describe the steps
+- Tell me the steps needed
+- Can you explain to me the steps
+- Tell me how can I make it
+- Explain the procedure
+- Tell me the steps required
 - What is the procedure?
 - Tell me about the steps
-- Tell me the procedure
-- Can you explain to me the steps
-- Explain the procedure
-- What are the steps?
-- Tell me the steps required
+- Describe the steps
 
 ## intent:start_cooking
-- I decided to make it
-- OK, I'm ready to start
-- I want to do the first one
-- Let's cook it
 - Let's start!
-- I decided to prepare the second recipe
-- I want to cook the first of the list
+- Let's cook the first recipe
+- I want to do the first recipe
+- OK, I'm ready to start
 - Let's prepare it
+- I want to cook the first one
+- I decided to prepare the second recipe
+- I decided to make it
 
 ## intent:next_step
+- Next step
+- Go on
+- What's next?
 - The next step?
 - I'm ready
-- What's next?
-- What's the next step?
-- Go on
 - Next one
 
 ## intent:clear_search
-- Reset the search
+- Remove th previous filters
+- Forget the previous parameters
 - Forget the previous filters
 - Clear the search filters
-- Forget the previous parameters
-- Remove th previous filters
-- Start a new search
+- New search
+- Reset the search filters
+- Reset the search
 - Reset my search
-- I want to search another recipe
 
 ## intent:affirm
-- how nice!
-- yes please
 - nice
-- i will!
-- Sure
-- yes i do
-- yep
-- ok cool
-- sure!
-- amazing
-- yes i accept
-- definitely yes without a doubt
-- I accept
-- yeah
-- sure, I want to cook it
-- alright
-- i accept
-- yes please!
-- sure, i do
-- perfect
-- cool
-- cool!
-- absolutely
-- yes, let's cook it
-- confirm
-- I'm sure I will!
-- great
-- Sweet
-- amazing!
 - ok
+- Sure
+- yes please
+- ok cool
+- yep
 - accept
+- go for it
+- amazing!
+- oh cool
+- alright
+- cool!
+- great
+- sure, i do
+- confirm
+- sure!
+- ok i accept
+- yeah
+- yup
+- yes i do
+- I accept
+- i will!
+- Oh, ok
+- how nice!
+- sure thing
+- cool
+- perfect
+- i accept
+- yes, let's cook it
 - yes
+- sure, I want to cook it
+- amazing
 
 ## intent:deny
-- i decline
-- not really
-- i'm not sure
-- never mind
-- neither of these
-- no sir
-- no way
-- No, not really.
-- no
 - no i don't
+- No, not really.
 - no sorry
-- deny
-- absolutely not
-- never
-- nah not for me
-- no you did it wrong
-- i don't want to
-- nah thanks
+- i'm not sure
+- no
+- nah
 - i'm afraid not
+- deny
+- i don't want either of those
 - definitely not
+- no thanks
+- no sir
+- nah thanks
+- i don't want to
+- no way
+- no you did it wrong
+- i don't think so
+- i decline
+- absolutely not
+- decline
 
 ## synonym:true
 - gluten free

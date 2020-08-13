@@ -1,18 +1,26 @@
 [
   {
-    "text": "hi",
+    "text": "hey there",
     "intent": "greet",
     "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.4398405829583486
+      "name": "affirm",
+      "confidence": 0.5582520226516515
     }
   },
   {
-    "text": "more recipes please",
+    "text": "I don't like them",
     "intent": "next_page",
     "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.595037841269952
+      "confidence": 0.5082020370282835
+    }
+  },
+  {
+    "text": "Tell me the details",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "get_recipe_steps",
+      "confidence": 0.32981615647560447
     }
   },
   {
@@ -20,39 +28,15 @@
     "intent": "get_recipe_info",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.28870616651663494
+      "confidence": 0.25077920300108936
     }
   },
   {
-    "text": "Tell me its nutrition",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.29116614184952516
-    }
-  },
-  {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "OK, I'm ready to start",
+    "intent": "start_cooking",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.30186353251271414
-    }
-  },
-  {
-    "text": "Let's cook the first recipe",
-    "intent": "start_cooking",
-    "intent_prediction": {
-      "name": "get_recipe_ingredients",
-      "confidence": 0.17446532468845552
-    }
-  },
-  {
-    "text": "I decided to prepare the second recipe",
-    "intent": "start_cooking",
-    "intent_prediction": {
-      "name": "get_recipe_ingredients",
-      "confidence": 0.18479494996468923
+      "confidence": 0.31818530936299977
     }
   },
   {
@@ -60,63 +44,23 @@
     "intent": "start_cooking",
     "intent_prediction": {
       "name": "next_step",
-      "confidence": 0.24891206253575904
+      "confidence": 0.22538100388103088
     }
   },
   {
-    "text": "I'm ready",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.4242969249610608
+      "name": "affirm",
+      "confidence": 0.2655528506749224
     }
   },
   {
-    "text": "I want to search another recipe",
-    "intent": "clear_search",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.3553888542025166
-    }
-  },
-  {
-    "text": "Sure",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.21773103777585157
-    }
-  },
-  {
-    "text": "absolutely",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.7639349864866382
-    }
-  },
-  {
-    "text": "deny",
+    "text": "no you did it wrong",
     "intent": "deny",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.3339151844348061
-    }
-  },
-  {
-    "text": "neither of these",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.3258953937982527
-    }
-  },
-  {
-    "text": "i decline",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.2507108954961583
+      "confidence": 0.31413847317971133
     }
   }
 ]

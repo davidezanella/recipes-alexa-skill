@@ -1,66 +1,90 @@
 [
   {
-    "text": "hi",
-    "intent": "greet",
+    "text": "I don't want mango or watermelon",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5747803449630737
+    }
+  },
+  {
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.42046305537223816
+    }
+  },
+  {
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
     "intent_prediction": {
       "name": "start_cooking",
-      "confidence": 0.19342336058616638
-    }
-  },
-  {
-    "text": "I don't like eggs",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.43545010685920715
-    }
-  },
-  {
-    "text": "search the recipe of meet",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.2946062386035919
-    }
-  },
-  {
-    "text": "find the recipe of the strudel",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.38021865487098694
-    }
-  },
-  {
-    "text": "Tell me more about it",
-    "intent": "get_recipe_info",
-    "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.22791829705238342
-    }
-  },
-  {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
-    "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.1784685105085373
+      "confidence": 0.4823039174079895
     }
   },
   {
     "text": "I've done",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.20075979828834534
+      "name": "deny",
+      "confidence": 0.13049687445163727
     }
   },
   {
-    "text": "go for it",
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.8464604020118713
+    }
+  },
+  {
+    "text": "of course",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "next_step",
-      "confidence": 0.536175012588501
+      "name": "search_recipe",
+      "confidence": 0.2654643952846527
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6932935118675232
+    }
+  },
+  {
+    "text": "Sweet",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.12702584266662598
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.15146611630916595
+    }
+  },
+  {
+    "text": "neither of these",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.15690046548843384
+    }
+  },
+  {
+    "text": "never mind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.17463284730911255
     }
   }
 ]

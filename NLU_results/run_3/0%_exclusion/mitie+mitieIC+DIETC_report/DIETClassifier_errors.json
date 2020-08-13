@@ -1,222 +1,322 @@
 [
   {
-    "text": "search the recipe of meet",
+    "text": "find a recipe for a cake where i can use raspberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "cake",
+        "entity": "search_text"
+      },
+      {
+        "start": 41,
+        "end": 52,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "cake",
+        "start": 20,
+        "end": 24,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "value": "raspberries",
+        "start": 41,
+        "end": 52,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 20,
+        "end": 24,
+        "value": "cake",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 41,
+        "end": 52,
+        "value": "raspberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "spaghetti",
+        "start": 25,
+        "end": 34,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can i cook using eggs?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "eggs",
+        "start": 22,
+        "end": 26,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 22,
+        "end": 26,
+        "value": "eggs",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i want the recipe of lasagna",
     "entities": [
       {
         "start": 21,
-        "end": 25,
-        "value": "meet",
+        "end": 28,
+        "value": "lasagna",
         "entity": "search_text"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "value": "lasagna",
+        "start": 21,
+        "end": 28,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 21,
+        "end": 28,
+        "value": "lasagna",
+        "extractor": "DIETClassifier"
+      }
+    ]
   },
   {
-    "text": "i don't want recipes with bacon",
+    "text": "I have some eggs what can i prepare?",
     "entities": [
       {
-        "start": 26,
-        "end": 31,
-        "value": "bacon",
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "value": "eggs",
+        "start": 12,
+        "end": 16,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't have any pers",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "pers",
         "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "value": "bacon",
-        "start": 26,
-        "end": 31,
+        "value": "pers",
+        "start": 17,
+        "end": 21,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
-      },
-      {
-        "entity": "search_ingredients",
-        "start": 26,
-        "end": 31,
-        "value": "bacon",
-        "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I want to cook something using carrots",
+    "text": "find a recipe where i can use strawberries but without salad",
     "entities": [
       {
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "value": "carrots",
-        "start": 31,
-        "end": 38,
-        "confidence": null,
-        "extractor": "MitieEntityExtractor"
-      },
-      {
-        "entity": "search_text",
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "i want to cook something using raspberries but without using strawberries",
-    "entities": [
-      {
-        "start": 31,
+        "start": 30,
         "end": 42,
-        "value": "raspberries",
+        "value": "strawberries",
         "entity": "search_ingredients"
       },
       {
-        "start": 61,
-        "end": 73,
-        "value": "strawberries",
+        "start": 55,
+        "end": 60,
+        "value": "salad",
         "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "search_ingredients",
-        "value": "raspberries",
-        "start": 31,
-        "end": 42,
-        "confidence": null,
-        "extractor": "MitieEntityExtractor"
-      },
-      {
-        "entity": "search_ingredients",
         "value": "strawberries",
-        "start": 61,
-        "end": 73,
-        "confidence": null,
-        "extractor": "MitieEntityExtractor"
-      },
-      {
-        "entity": "search_ingredients",
-        "start": 31,
+        "start": 30,
         "end": 42,
-        "value": "raspberries",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "search_ingredients",
-        "start": 61,
-        "end": 73,
-        "value": "strawberries",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "search a recipe for pizza",
-    "entities": [
-      {
-        "start": 20,
-        "end": 25,
-        "value": "pizza",
-        "entity": "search_text"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_text",
-        "value": "pizza",
-        "start": 20,
-        "end": 25,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
       },
       {
         "entity": "avoid_ingredients",
-        "start": 20,
-        "end": 25,
-        "value": "pizza",
+        "value": "salad",
+        "start": 55,
+        "end": 60,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 55,
+        "end": 60,
+        "value": "salad",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "i need a recipe where i can use sugar",
+    "text": "I don't want mango or watermelon",
     "entities": [
       {
-        "start": 32,
-        "end": 37,
-        "value": "sugar",
+        "start": 13,
+        "end": 18,
+        "value": "mango",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 22,
+        "end": 32,
+        "value": "watermelon",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "value": "mango",
+        "start": 13,
+        "end": 18,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "value": "watermelon",
+        "start": 22,
+        "end": 32,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 13,
+        "end": 18,
+        "value": "mango",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 22,
+        "end": 32,
+        "value": "watermelon",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can i cook using beef?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "beef",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "search_ingredients",
-        "value": "sugar",
-        "start": 32,
-        "end": 37,
+        "value": "beef",
+        "start": 22,
+        "end": 26,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
-      },
+      }
+    ]
+  },
+  {
+    "text": "Start a new search",
+    "entities": [],
+    "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 32,
-        "end": 37,
-        "value": "sugar",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "what can i cook in fifty minutes?",
-    "entities": [
-      {
-        "start": 19,
-        "end": 24,
-        "value": "fifty",
-        "entity": "max_minutes"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "max_minutes",
-        "value": "fifty",
-        "start": 19,
-        "end": 24,
-        "confidence": null,
-        "extractor": "MitieEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "find the recipe of the strudel",
-    "entities": [
-      {
-        "start": 23,
-        "end": 30,
-        "value": "strudel",
-        "entity": "search_text"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_text",
-        "value": "strudel",
-        "start": 23,
-        "end": 30,
+        "value": "Start",
+        "start": 0,
+        "end": 5,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
       },
       {
-        "entity": "search_ingredients",
-        "start": 23,
-        "end": 30,
-        "value": "strudel",
+        "entity": "search_text",
+        "start": 0,
+        "end": 5,
+        "value": "Start",
         "extractor": "DIETClassifier"
       }
     ]

@@ -1,59 +1,153 @@
 [
   {
-    "text": "find a recipe where i can use strawberries but without salad",
+    "text": "I have some radish what can i prepare?",
     "entities": [
       {
-        "start": 30,
-        "end": 42,
-        "value": "strawberries",
+        "start": 12,
+        "end": 18,
+        "value": "radish",
         "entity": "search_ingredients"
-      },
+      }
+    ],
+    "predicted_entities": [
       {
-        "start": 55,
-        "end": 60,
-        "value": "salad",
-        "entity": "avoid_ingredients"
+        "entity": "search_ingredients",
+        "start": 12,
+        "end": 16,
+        "value": "radi",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have some eggs what can i prepare?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 30,
-        "end": 42,
-        "value": "strawberries",
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use cardamom",
+    "entities": [
+      {
+        "start": 32,
+        "end": 40,
+        "value": "cardamom",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 32,
+        "end": 36,
+        "value": "card",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "search_ingredients",
-        "start": 55,
-        "end": 60,
-        "value": "salad",
+        "start": 39,
+        "end": 40,
+        "value": "m",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "search recipes to use zucchini",
+    "text": "i need the recipe of muffins",
     "entities": [
       {
-        "start": 22,
-        "end": 30,
-        "value": "zucchini",
+        "start": 21,
+        "end": 28,
+        "value": "muffins",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 21,
+        "end": 27,
+        "value": "muffin",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 27,
+        "end": 28,
+        "value": "s",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 22,
-        "end": 26,
-        "value": "zucc",
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "find a recipe for a dessert with strawberries",
+    "text": "I have some peppers what can i cook?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "peppers",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 19,
+        "value": "peppers",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe for a dessert without strawberries",
     "entities": [
       {
         "start": 20,
@@ -62,10 +156,10 @@
         "entity": "search_text"
       },
       {
-        "start": 33,
-        "end": 45,
+        "start": 36,
+        "end": 48,
         "value": "strawberries",
-        "entity": "search_ingredients"
+        "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": [
@@ -77,90 +171,50 @@
         "extractor": "DIETClassifier"
       },
       {
-        "entity": "avoid_ingredients",
-        "start": 33,
-        "end": 45,
+        "entity": "search_ingredients",
+        "start": 36,
+        "end": 48,
         "value": "strawberries",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I want something without peppers",
+    "text": "I want to cook something using acacia",
     "entities": [
       {
-        "start": 25,
-        "end": 32,
-        "value": "peppers",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "start": 25,
-        "end": 32,
-        "value": "peppers",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "i need a recipe where i can use red chilly",
-    "entities": [
-      {
-        "start": 32,
-        "end": 42,
-        "value": "red chilly",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "start": 36,
-        "end": 42,
-        "value": "chilly",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "search recipes to use milk",
-    "entities": [
-      {
-        "start": 22,
-        "end": 26,
-        "value": "milk",
+        "start": 31,
+        "end": 37,
+        "value": "acacia",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 22,
-        "end": 26,
-        "value": "milk",
+        "start": 31,
+        "end": 37,
+        "value": "acacia",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "what can i cook without cane sugar?",
+    "text": "I want to cook something using carrots",
     "entities": [
       {
-        "start": 24,
-        "end": 34,
-        "value": "cane sugar",
-        "entity": "avoid_ingredients"
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "search_ingredients",
-        "start": 24,
-        "end": 34,
-        "value": "cane sugar",
+        "entity": "avoid_ingredients",
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
         "extractor": "DIETClassifier"
       }
     ]

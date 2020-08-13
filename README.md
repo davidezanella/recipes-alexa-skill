@@ -17,3 +17,14 @@ pip3 install -r requirements.txt
     * run the `scrape_ingredients_quantity.py` script if you want to take the right ingredients quantity from the web
 - Install the `ngrok` program
 - Create an Alexa developer account
+
+## Test different configurations
+To test different nlu pipelines over the training nlu, create some configuration files in the `NLU_pipelines` folder and then type:
+```shell script
+make test-nlu
+```
+
+To test different core policies over the test stories, create some configuration files in the `CORE_policies` folder and then type:
+```shell script
+make test-core
+```

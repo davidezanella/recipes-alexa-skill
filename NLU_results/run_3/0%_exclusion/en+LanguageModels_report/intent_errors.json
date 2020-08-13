@@ -1,42 +1,50 @@
 [
   {
-    "text": "hi",
+    "text": "hello",
     "intent": "greet",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.4125099778175354
+      "confidence": 0.5173411965370178
     }
   },
   {
-    "text": "search the recipe of meet",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.9640285968780518
-    }
-  },
-  {
-    "text": "search a recipe for pizza",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.7261105179786682
-    }
-  },
-  {
-    "text": "find the recipe of the strudel",
-    "intent": "search_recipe",
-    "intent_prediction": {
-      "name": "choose_recipe",
-      "confidence": 0.3222140967845917
-    }
-  },
-  {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "what about the second one?",
+    "intent": "choose_recipe",
     "intent_prediction": {
       "name": "get_recipe_info",
-      "confidence": 0.42919543385505676
+      "confidence": 0.5392112731933594
+    }
+  },
+  {
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.5791851282119751
+    }
+  },
+  {
+    "text": "Tell me about the first one",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.6317888498306274
+    }
+  },
+  {
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.2097342312335968
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.83998703956604
     }
   },
   {
@@ -44,15 +52,39 @@
     "intent": "next_step",
     "intent_prediction": {
       "name": "deny",
-      "confidence": 0.5275826454162598
+      "confidence": 0.4659506380558014
     }
   },
   {
-    "text": "go for it",
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.9734269976615906
+    }
+  },
+  {
+    "text": "definitely yes without a doubt",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "next_step",
-      "confidence": 0.5609529614448547
+      "name": "search_recipe",
+      "confidence": 0.7523851990699768
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9802716970443726
+    }
+  },
+  {
+    "text": "never mind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.2235041856765747
     }
   }
 ]

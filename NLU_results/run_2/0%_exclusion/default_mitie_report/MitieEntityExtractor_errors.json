@@ -1,51 +1,81 @@
 [
   {
-    "text": "hi",
-    "entities": [],
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
     "predicted_entities": [
       {
+        "entity": "search_text",
+        "value": "dessert",
+        "start": 20,
+        "end": 27,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor"
+      },
+      {
         "entity": "avoid_ingredients",
-        "value": "hi",
-        "start": 0,
-        "end": 2,
+        "value": "strawberries",
+        "start": 33,
+        "end": 45,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
       }
     ]
   },
   {
-    "text": "What can I cook gluten-free?",
+    "text": "Tell me some recipe for a dish without gluten",
     "entities": [
       {
-        "start": 16,
-        "end": 27,
+        "start": 31,
+        "end": 45,
         "value": "true",
         "entity": "gluten_free"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "gluten_free",
-        "value": "cook gluten-free",
-        "start": 11,
-        "end": 27,
+        "entity": "search_text",
+        "value": "dish",
+        "start": 26,
+        "end": 30,
         "confidence": null,
         "extractor": "MitieEntityExtractor"
+      },
+      {
+        "entity": "gluten_free",
+        "value": "true",
+        "start": 31,
+        "end": 45,
+        "confidence": null,
+        "extractor": "MitieEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       }
     ]
   },
   {
-    "text": "Tell me its calories",
-    "entities": [],
-    "predicted_entities": [
+    "text": "search the recipe of meet",
+    "entities": [
       {
-        "entity": "max_calories",
-        "value": "its",
-        "start": 8,
-        "end": 11,
-        "confidence": null,
-        "extractor": "MitieEntityExtractor"
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
       }
-    ]
+    ],
+    "predicted_entities": []
   }
 ]

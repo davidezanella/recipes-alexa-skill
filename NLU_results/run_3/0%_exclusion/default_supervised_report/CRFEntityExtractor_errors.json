@@ -1,139 +1,260 @@
 [
   {
-    "text": "I don't like eggs",
+    "text": "i don't want recipes with bacon",
     "entities": [
       {
-        "start": 13,
-        "end": 17,
-        "value": "eggs",
+        "start": 26,
+        "end": 31,
+        "value": "bacon",
         "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "search the recipe of meet",
+    "text": "I want something without peppers",
     "entities": [
       {
-        "start": 21,
-        "end": 25,
-        "value": "meet",
-        "entity": "search_text"
+        "start": 25,
+        "end": 32,
+        "value": "peppers",
+        "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "i want to cook something using raspberries but without using strawberries",
-    "entities": [
-      {
-        "start": 31,
-        "end": 42,
-        "value": "raspberries",
-        "entity": "search_ingredients"
-      },
-      {
-        "start": 61,
-        "end": 73,
-        "value": "strawberries",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "start": 31,
-        "end": 42,
-        "confidence_entity": 0.8082886549948793,
-        "value": "raspberries",
-        "extractor": "CRFEntityExtractor"
-      },
-      {
-        "entity": "search_ingredients",
-        "start": 61,
-        "end": 73,
-        "confidence_entity": 0.9689500164676602,
-        "value": "strawberries",
-        "extractor": "CRFEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "I want to cook using potatoes and chicken",
-    "entities": [
-      {
-        "start": 21,
-        "end": 29,
-        "value": "potatoes",
-        "entity": "search_ingredients"
-      },
-      {
-        "start": 34,
-        "end": 41,
-        "value": "chicken",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "start": 21,
-        "end": 29,
-        "confidence_entity": 0.3906076556448452,
-        "value": "potatoes",
-        "extractor": "CRFEntityExtractor"
-      },
-      {
-        "entity": "avoid_ingredients",
-        "start": 34,
-        "end": 41,
-        "confidence_entity": 0.44445208966962796,
-        "value": "chicken",
-        "extractor": "CRFEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "search a recipe for pizza",
+    "text": "find a recipe for a cake where i can use raspberries",
     "entities": [
       {
         "start": 20,
-        "end": 25,
-        "value": "pizza",
+        "end": 24,
+        "value": "cake",
+        "entity": "search_text"
+      },
+      {
+        "start": 41,
+        "end": 52,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 41,
+        "end": 52,
+        "confidence_entity": 0.9548612892521448,
+        "value": "raspberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
         "entity": "search_text"
       }
     ],
     "predicted_entities": []
   },
   {
-    "text": "I am looking for gluten free recipe\"",
+    "text": "What can i cook using eggs?",
     "entities": [
       {
-        "start": 17,
-        "end": 28,
-        "value": "true",
-        "entity": "gluten_free"
+        "start": 22,
+        "end": 26,
+        "value": "eggs",
+        "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "gluten_free",
-        "start": 17,
-        "end": 23,
-        "confidence_entity": 0.5730790606449335,
-        "value": "gluten",
+        "entity": "avoid_ingredients",
+        "start": 22,
+        "end": 26,
+        "confidence_entity": 0.9498450669821216,
+        "value": "eggs",
         "extractor": "CRFEntityExtractor"
       }
     ]
   },
   {
-    "text": "find the recipe of the strudel",
+    "text": "avoid recipes with peach",
     "entities": [
       {
-        "start": 23,
-        "end": 30,
-        "value": "strudel",
+        "start": 19,
+        "end": 24,
+        "value": "peach",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe where i can cook using cucumber",
+    "entities": [
+      {
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 37,
+        "end": 45,
+        "confidence_entity": 0.5179687671336204,
+        "value": "cucumber",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook without using caramel?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 37,
+        "value": "caramel",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.7621877760091685,
+        "value": "caramel",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want the recipe of lasagna",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "lasagna",
         "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want something without coconut",
+    "entities": [
+      {
+        "start": 25,
+        "end": 32,
+        "value": "coconut",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have some eggs what can i prepare?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.4806375585488629,
+        "value": "eggs",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I don't have any pers",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "pers",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe where i can use strawberries but without salad",
+    "entities": [
+      {
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 30,
+        "end": 42,
+        "confidence_entity": 0.8246842611853719,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.5404567126276782,
+        "value": "salad",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I don't want mango or watermelon",
+    "entities": [
+      {
+        "start": 13,
+        "end": 18,
+        "value": "mango",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 22,
+        "end": 32,
+        "value": "watermelon",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avoid recipes with lamb",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "lamb",
+        "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": []

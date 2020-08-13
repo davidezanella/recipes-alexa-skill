@@ -1,0 +1,286 @@
+[
+  {
+    "text": "i don't want recipes with bacon",
+    "entities": [
+      {
+        "start": 26,
+        "end": 31,
+        "value": "bacon",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want something without peppers",
+    "entities": [
+      {
+        "start": 25,
+        "end": 32,
+        "value": "peppers",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe for a cake where i can use raspberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "cake",
+        "entity": "search_text"
+      },
+      {
+        "start": 41,
+        "end": 52,
+        "value": "raspberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 41,
+        "end": 52,
+        "confidence_entity": 0.9619594979883507,
+        "value": "raspberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What can i cook using eggs?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 22,
+        "end": 26,
+        "confidence_entity": 0.9770013884423902,
+        "value": "eggs",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "avoid recipes with peach",
+    "entities": [
+      {
+        "start": 19,
+        "end": 24,
+        "value": "peach",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe where i can cook using cucumber",
+    "entities": [
+      {
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 37,
+        "end": 45,
+        "confidence_entity": 0.474211494480146,
+        "value": "cucumber",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what can i cook without using caramel?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 37,
+        "value": "caramel",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 30,
+        "end": 37,
+        "confidence_entity": 0.4579774688098433,
+        "value": "caramel",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i want the recipe of lasagna",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "lasagna",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want something without coconut",
+    "entities": [
+      {
+        "start": 25,
+        "end": 32,
+        "value": "coconut",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have some eggs what can i prepare?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 16,
+        "value": "eggs",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.5912861827428832,
+        "value": "eggs",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What can i cook using avocado?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 29,
+        "value": "avocado",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I don't have any pers",
+    "entities": [
+      {
+        "start": 17,
+        "end": 21,
+        "value": "pers",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find a recipe where i can use strawberries but without salad",
+    "entities": [
+      {
+        "start": 30,
+        "end": 42,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "salad",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 30,
+        "end": 42,
+        "confidence_entity": 0.7237911251388734,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.5783538348363848,
+        "value": "salad",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I don't want mango or watermelon",
+    "entities": [
+      {
+        "start": 13,
+        "end": 18,
+        "value": "mango",
+        "entity": "avoid_ingredients"
+      },
+      {
+        "start": 22,
+        "end": 32,
+        "value": "watermelon",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avoid recipes with lamb",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "lamb",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What can i cook using beef?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "beef",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

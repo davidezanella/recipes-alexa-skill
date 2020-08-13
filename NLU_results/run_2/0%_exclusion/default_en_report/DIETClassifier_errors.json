@@ -1,80 +1,145 @@
 [
   {
-    "text": "I have some eggs what can i prepare?",
+    "text": "find a recipe without honey",
     "entities": [
       {
-        "start": 12,
-        "end": 16,
-        "value": "eggs",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "avoid_ingredients",
-        "start": 12,
-        "end": 16,
-        "value": "eggs",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "what can i cook without cherry?",
-    "entities": [
-      {
-        "start": 24,
-        "end": 30,
-        "value": "cherry",
+        "start": 22,
+        "end": 27,
+        "value": "honey",
         "entity": "avoid_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "search_ingredients",
-        "start": 24,
+        "start": 22,
+        "end": 27,
+        "value": "honey",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i need a recipe where i can use cardamom",
+    "entities": [
+      {
+        "start": 32,
+        "end": 40,
+        "value": "cardamom",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 36,
+        "end": 40,
+        "value": "amom",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "find the recipe of the strudel",
+    "entities": [
+      {
+        "start": 23,
         "end": 30,
-        "value": "cherry",
+        "value": "strudel",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 27,
+        "end": 30,
+        "value": "del",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I have some cinnamon what can i prepare?",
+    "text": "find a recipe where i can cook using cucumber",
     "entities": [
       {
-        "start": 12,
-        "end": 20,
-        "value": "cinnamon",
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 12,
-        "end": 20,
-        "value": "cinnamon",
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "I want to cook something using carrots",
+    "text": "What can i cook using avocado?",
     "entities": [
       {
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
+        "start": 22,
+        "end": 29,
+        "value": "avocado",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
+        "start": 22,
+        "end": 29,
+        "value": "avocado",
         "extractor": "DIETClassifier"
       }
     ]
@@ -100,21 +165,46 @@
     ]
   },
   {
-    "text": "give me some recipes to cook using mango",
+    "text": "search the recipe of meet",
     "entities": [
       {
-        "start": 35,
-        "end": 40,
-        "value": "mango",
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 35,
-        "end": 40,
-        "value": "mango",
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
         "extractor": "DIETClassifier"
       }
     ]
@@ -135,46 +225,6 @@
         "start": 32,
         "end": 37,
         "value": "sugar",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "avoid recipes with chops",
-    "entities": [
-      {
-        "start": 19,
-        "end": 24,
-        "value": "chops",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "search_ingredients",
-        "start": 19,
-        "end": 24,
-        "value": "chops",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "find a recipe where i can cook using cucumber",
-    "entities": [
-      {
-        "start": 37,
-        "end": 45,
-        "value": "cucumber",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "avoid_ingredients",
-        "start": 37,
-        "end": 45,
-        "value": "cucumber",
         "extractor": "DIETClassifier"
       }
     ]

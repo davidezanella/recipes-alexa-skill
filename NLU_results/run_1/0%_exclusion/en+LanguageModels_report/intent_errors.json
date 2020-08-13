@@ -1,50 +1,82 @@
 [
   {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.4938580393791199
+    }
+  },
+  {
+    "text": "find another recipe",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.7213007211685181
+    }
+  },
+  {
+    "text": "I don't like them",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "choose_recipe",
+      "confidence": 0.6823487281799316
+    }
+  },
+  {
+    "text": "Find another one",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.6856420636177063
+    }
+  },
+  {
     "text": "Tell me more about it",
     "intent": "get_recipe_info",
     "intent_prediction": {
-      "name": "get_recipe_ingredients",
-      "confidence": 0.3338000178337097
+      "name": "next_page",
+      "confidence": 0.7201261520385742
     }
   },
   {
-    "text": "I'm ready",
+    "text": "Tell me its calories",
+    "intent": "get_recipe_nutrition",
+    "intent_prediction": {
+      "name": "clear_search",
+      "confidence": 0.2415584772825241
+    }
+  },
+  {
+    "text": "OK, I'm ready to start",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.7433809638023376
+    }
+  },
+  {
+    "text": "Let's start!",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "next_step",
+      "confidence": 0.3889644145965576
+    }
+  },
+  {
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.9322037100791931
-    }
-  },
-  {
-    "text": "I want to search another recipe",
-    "intent": "clear_search",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.8607557415962219
+      "name": "greet",
+      "confidence": 0.26633957028388977
     }
   },
   {
     "text": "go for it",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "next_step",
-      "confidence": 0.4814230501651764
-    }
-  },
-  {
-    "text": "absolutely",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.6697945594787598
-    }
-  },
-  {
-    "text": "neither of these",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.5086806416511536
+      "name": "get_recipe_ingredients",
+      "confidence": 0.44580626487731934
     }
   }
 ]

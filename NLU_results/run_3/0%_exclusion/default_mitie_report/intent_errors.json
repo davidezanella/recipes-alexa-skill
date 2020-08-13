@@ -1,50 +1,74 @@
 [
   {
-    "text": "hi",
+    "text": "hello",
     "intent": "greet",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.38547446836650084
+      "confidence": 0.2810504704220252
     }
   },
   {
-    "text": "search the recipe of meet",
-    "intent": "search_recipe",
+    "text": "more recipes please",
+    "intent": "next_page",
     "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.23642020723825707
+      "name": "search_recipe",
+      "confidence": 0.6337153653049875
     }
   },
   {
-    "text": "search a recipe for pizza",
-    "intent": "search_recipe",
+    "text": "what about the second one?",
+    "intent": "choose_recipe",
     "intent_prediction": {
-      "name": "clear_search",
-      "confidence": 0.335325698362953
+      "name": "get_recipe_info",
+      "confidence": 0.22521783452858898
     }
   },
   {
-    "text": "Tell me more about it",
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.2194307178996431
+    }
+  },
+  {
+    "text": "Tell me the details",
     "intent": "get_recipe_info",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.24088332574076127
+      "name": "get_recipe_steps",
+      "confidence": 0.3119845681488754
     }
   },
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.21919276576863816
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.3089499141901138
+      "confidence": 0.3431520162793882
     }
   },
   {
     "text": "I've done",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.20329837381575322
+      "name": "next_page",
+      "confidence": 0.23562348229376723
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.3507699377033292
     }
   },
   {
@@ -52,7 +76,31 @@
     "intent": "affirm",
     "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.3510425051331775
+      "confidence": 0.3798592037759853
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6808960133538164
+    }
+  },
+  {
+    "text": "Sweet",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.2051131406041041
+    }
+  },
+  {
+    "text": "neither of these",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.19312423093744963
     }
   }
 ]

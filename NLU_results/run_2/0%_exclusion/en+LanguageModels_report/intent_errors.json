@@ -1,50 +1,74 @@
 [
   {
-    "text": "hey",
+    "text": "good morning",
     "intent": "greet",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.6091943979263306
+      "name": "next_page",
+      "confidence": 0.5039766430854797
     }
   },
   {
-    "text": "hi",
-    "intent": "greet",
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.8786345720291138
+      "name": "clear_search",
+      "confidence": 0.5740717649459839
     }
   },
   {
-    "text": "what about the second one?",
-    "intent": "choose_recipe",
+    "text": "Alternatives?",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5057031512260437
+    }
+  },
+  {
+    "text": "Describe the steps",
+    "intent": "get_recipe_steps",
     "intent_prediction": {
       "name": "get_recipe_info",
-      "confidence": 0.7504420876502991
+      "confidence": 0.8030632138252258
     }
   },
   {
-    "text": "Tell me its calories",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "get_recipe_steps",
-      "confidence": 0.4943031072616577
-    }
-  },
-  {
-    "text": "How many calories does it have?",
-    "intent": "get_recipe_nutrition",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.9842780232429504
-    }
-  },
-  {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9876614809036255
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.9647424817085266
+    }
+  },
+  {
+    "text": "absolutely",
+    "intent": "affirm",
+    "intent_prediction": {
       "name": "deny",
-      "confidence": 0.8570270538330078
+      "confidence": 0.6337071061134338
+    }
+  },
+  {
+    "text": "i will!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3301529884338379
+    }
+  },
+  {
+    "text": "deny",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.32028868794441223
     }
   }
 ]

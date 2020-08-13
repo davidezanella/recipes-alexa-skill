@@ -1,0 +1,50 @@
+[
+  {
+    "text": "hey there",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.255896070026045
+    }
+  },
+  {
+    "text": "search the recipe of meet",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_ingredients",
+      "confidence": 0.15401151300659205
+    }
+  },
+  {
+    "text": "more recipes please",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.3048499043843337
+    }
+  },
+  {
+    "text": "Alternatives?",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.32262926231356237
+    }
+  },
+  {
+    "text": "Go on",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2633034895579718
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "start_cooking",
+      "confidence": 0.20384306246904196
+    }
+  }
+]

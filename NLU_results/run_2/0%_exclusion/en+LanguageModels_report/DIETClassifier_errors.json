@@ -1,77 +1,144 @@
 [
   {
-    "text": "what can i cook without using grapes or banana?",
+    "text": "find a recipe without honey",
     "entities": [
       {
-        "start": 30,
-        "end": 36,
-        "value": "grapes",
+        "start": 22,
+        "end": 27,
+        "value": "honey",
         "entity": "avoid_ingredients"
-      },
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need a recipe where i can use cardamom",
+    "entities": [
       {
-        "start": 40,
-        "end": 46,
-        "value": "banana",
-        "entity": "avoid_ingredients"
+        "start": 32,
+        "end": 40,
+        "value": "cardamom",
+        "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "avoid_ingredients",
-        "start": 30,
+        "entity": "search_ingredients",
+        "start": 32,
         "end": 36,
-        "value": "grapes",
+        "value": "card",
         "extractor": "DIETClassifier"
       },
       {
-        "entity": "search_ingredients",
-        "start": 40,
-        "end": 46,
-        "value": "banana",
+        "entity": "gluten_free",
+        "start": 39,
+        "end": 40,
+        "value": "m",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "what can i cook without cherry?",
+    "text": "find a recipe for a dessert with strawberries",
     "entities": [
       {
-        "start": 24,
-        "end": 30,
-        "value": "cherry",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "I have some cinnamon what can i prepare?",
-    "entities": [
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
       {
-        "start": 12,
-        "end": 20,
-        "value": "cinnamon",
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
         "entity": "search_ingredients"
       }
     ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i would like to cook the spaghetti",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "spaghetti",
+        "entity": "search_text"
+      }
+    ],
     "predicted_entities": []
   },
   {
-    "text": "I want to cook something using carrots",
+    "text": "find the recipe of the strudel",
     "entities": [
       {
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
+        "start": 23,
+        "end": 30,
+        "value": "strudel",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 28,
+        "end": 30,
+        "value": "el",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "find a recipe where i can cook using cucumber",
+    "entities": [
+      {
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
         "entity": "avoid_ingredients",
-        "start": 31,
-        "end": 38,
-        "value": "carrots",
+        "start": 37,
+        "end": 45,
+        "value": "cucumber",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What can i cook using avocado?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 29,
+        "value": "avocado",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 22,
+        "end": 29,
+        "value": "avocado",
         "extractor": "DIETClassifier"
       }
     ]
@@ -97,21 +164,65 @@
     ]
   },
   {
-    "text": "give me some recipes to cook using mango",
+    "text": "what can i cook in fifty minutes?",
     "entities": [
       {
-        "start": 35,
-        "end": 40,
-        "value": "mango",
+        "start": 19,
+        "end": 24,
+        "value": "fifty",
+        "entity": "max_minutes"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "search the recipe of meet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "meet",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
         "entity": "search_ingredients"
       }
     ],
     "predicted_entities": [
       {
+        "entity": "search_ingredients",
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "extractor": "DIETClassifier"
+      },
+      {
         "entity": "avoid_ingredients",
-        "start": 35,
-        "end": 40,
-        "value": "mango",
+        "start": 33,
+        "end": 36,
+        "value": "egg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "search_ingredients",
+        "start": 36,
+        "end": 41,
+        "value": "plant",
         "extractor": "DIETClassifier"
       }
     ]
@@ -132,78 +243,6 @@
         "start": 32,
         "end": 37,
         "value": "sugar",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "find a recipe where i can cook using parsley",
-    "entities": [
-      {
-        "start": 37,
-        "end": 44,
-        "value": "parsley",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "avoid_ingredients",
-        "start": 37,
-        "end": 44,
-        "value": "parsley",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "avoid recipes with chops",
-    "entities": [
-      {
-        "start": 19,
-        "end": 24,
-        "value": "chops",
-        "entity": "avoid_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "avoid_ingredients",
-        "start": 23,
-        "end": 24,
-        "value": "s",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "i need a recipe where i can use mint",
-    "entities": [
-      {
-        "start": 32,
-        "end": 36,
-        "value": "mint",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "find a recipe where i can cook using cucumber",
-    "entities": [
-      {
-        "start": 37,
-        "end": 45,
-        "value": "cucumber",
-        "entity": "search_ingredients"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "avoid_ingredients",
-        "start": 37,
-        "end": 45,
-        "value": "cucumber",
         "extractor": "DIETClassifier"
       }
     ]

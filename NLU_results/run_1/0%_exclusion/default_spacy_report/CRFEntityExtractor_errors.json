@@ -1,0 +1,133 @@
+[
+  {
+    "text": "find a recipe for a dessert with strawberries",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "dessert",
+        "entity": "search_text"
+      },
+      {
+        "start": 33,
+        "end": 45,
+        "value": "strawberries",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_text",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.7223344586794114,
+        "value": "dessert",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "avoid_ingredients",
+        "start": 33,
+        "end": 45,
+        "confidence_entity": 0.7371359129104994,
+        "value": "strawberries",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "avoid recipes with crab",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "crab",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avoid recipes with lamb",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "lamb",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i need the recipe of muffins",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "muffins",
+        "entity": "search_text"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook using cabbage and eggplant",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "cabbage",
+        "entity": "search_ingredients"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "eggplant",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "search_ingredients",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.7357256109206256,
+        "value": "cabbage",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "i don't want recipes with bacon",
+    "entities": [
+      {
+        "start": 26,
+        "end": 31,
+        "value": "bacon",
+        "entity": "avoid_ingredients"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to cook something using carrots",
+    "entities": [
+      {
+        "start": 31,
+        "end": 38,
+        "value": "carrots",
+        "entity": "search_ingredients"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "avoid_ingredients",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.5023871949885658,
+        "value": "carrots",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

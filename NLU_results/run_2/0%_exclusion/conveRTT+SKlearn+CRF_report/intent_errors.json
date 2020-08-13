@@ -1,26 +1,26 @@
 [
   {
-    "text": "hey",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.21008937835543182
-    }
-  },
-  {
-    "text": "How many calories does it have?",
+    "text": "Talk about the nutrition",
     "intent": "get_recipe_nutrition",
     "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.3894193871448579
+      "confidence": 0.233749849173464
     }
   },
   {
-    "text": "I've done",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.2632378206439466
+      "name": "get_recipe_info",
+      "confidence": 0.30052965392904696
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.3401057138452394
     }
   }
 ]

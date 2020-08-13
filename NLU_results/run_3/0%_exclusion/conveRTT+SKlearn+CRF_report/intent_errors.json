@@ -1,10 +1,42 @@
 [
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
     "intent_prediction": {
       "name": "get_recipe_info",
-      "confidence": 0.1694127167187958
+      "confidence": 0.2538579269462719
+    }
+  },
+  {
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.3419320036368601
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.39577872958471744
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2822000634751001
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "next_page",
+      "confidence": 0.3636219267487889
     }
   }
 ]

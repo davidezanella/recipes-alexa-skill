@@ -1,82 +1,34 @@
 [
   {
-    "text": "hi",
-    "intent": "greet",
+    "text": "I don't like them",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.9981878399848938
+    }
+  },
+  {
+    "text": "OK, I'm ready to start",
+    "intent": "start_cooking",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.99079829454422
+      "confidence": 0.7398805618286133
     }
   },
   {
-    "text": "Tell me how can I make it",
-    "intent": "get_recipe_steps",
-    "intent_prediction": {
-      "name": "search_recipe",
-      "confidence": 0.9896986484527588
-    }
-  },
-  {
-    "text": "I'm ready",
+    "text": "Go on",
     "intent": "next_step",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.6679301857948303
-    }
-  },
-  {
-    "text": "Remove th previous filters",
-    "intent": "clear_search",
-    "intent_prediction": {
       "name": "search_recipe",
-      "confidence": 0.9474444389343262
-    }
-  },
-  {
-    "text": "I want to search another recipe",
-    "intent": "clear_search",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.9706868529319763
-    }
-  },
-  {
-    "text": "Sure",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "next_page",
-      "confidence": 0.33350613713264465
+      "confidence": 0.6692255735397339
     }
   },
   {
     "text": "go for it",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "start_cooking",
-      "confidence": 0.5451462864875793
-    }
-  },
-  {
-    "text": "absolutely",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.9997149705886841
-    }
-  },
-  {
-    "text": "deny",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.530206024646759
-    }
-  },
-  {
-    "text": "neither of these",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "choose_recipe",
-      "confidence": 0.24904239177703857
+      "name": "search_recipe",
+      "confidence": 0.7999268174171448
     }
   }
 ]

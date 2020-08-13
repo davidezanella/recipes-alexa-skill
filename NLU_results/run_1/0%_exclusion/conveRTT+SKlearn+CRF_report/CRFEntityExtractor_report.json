@@ -1,9 +1,15 @@
 {
-  "vegetarian": {
+  "max_calories": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
+    "support": 2
+  },
+  "avoid_ingredients": {
+    "precision": 1.0,
+    "recall": 0.16666666666666666,
+    "f1-score": 0.2857142857142857,
+    "support": 6
   },
   "gluten_free": {
     "precision": 1.0,
@@ -11,58 +17,52 @@
     "f1-score": 1.0,
     "support": 5
   },
-  "search_ingredients": {
-    "precision": 0.8,
-    "recall": 0.2857142857142857,
-    "f1-score": 0.4210526315789473,
-    "support": 14
+  "search_text": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 4
   },
-  "vegan": {
+  "vegetarian": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 2
+    "support": 6
   },
   "max_minutes": {
-    "precision": 1.0,
-    "recall": 0.8,
-    "f1-score": 0.888888888888889,
-    "support": 5
-  },
-  "search_text": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 1
   },
-  "max_calories": {
+  "search_ingredients": {
+    "precision": 0.7777777777777778,
+    "recall": 0.3684210526315789,
+    "f1-score": 0.5,
+    "support": 19
+  },
+  "vegan": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
-  },
-  "avoid_ingredients": {
-    "precision": 0.5,
-    "recall": 0.2222222222222222,
-    "f1-score": 0.30769230769230765,
-    "support": 9
+    "support": 3
   },
   "micro avg": {
-    "precision": 0.9032258064516129,
-    "recall": 0.6086956521739131,
-    "f1-score": 0.7272727272727272,
+    "precision": 0.9310344827586207,
+    "recall": 0.5869565217391305,
+    "f1-score": 0.7200000000000001,
     "support": 46
   },
   "macro avg": {
-    "precision": 0.9125,
-    "recall": 0.7884920634920635,
-    "f1-score": 0.8272042285200181,
+    "precision": 0.9722222222222222,
+    "recall": 0.7543859649122807,
+    "f1-score": 0.8065476190476191,
     "support": 46
   },
   "weighted avg": {
-    "precision": 0.841304347826087,
-    "recall": 0.6086956521739131,
-    "f1-score": 0.6762698272995755,
+    "precision": 0.9082125603864735,
+    "recall": 0.5869565217391305,
+    "f1-score": 0.6713250517598344,
     "support": 46
   }
 }

@@ -1,0 +1,98 @@
+[
+  {
+    "text": "I don't have any pers",
+    "intent": "search_recipe",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.43226824492720456
+    }
+  },
+  {
+    "text": "more recipes please",
+    "intent": "next_page",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.3027940562714598
+    }
+  },
+  {
+    "text": "what about the second one?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.26696425033253307
+    }
+  },
+  {
+    "text": "what about the forth recipe?",
+    "intent": "choose_recipe",
+    "intent_prediction": {
+      "name": "get_recipe_info",
+      "confidence": 0.3034296056302108
+    }
+  },
+  {
+    "text": "Tell me the details",
+    "intent": "get_recipe_info",
+    "intent_prediction": {
+      "name": "get_recipe_steps",
+      "confidence": 0.27997193989808056
+    }
+  },
+  {
+    "text": "What do I need for the first recipe?",
+    "intent": "get_recipe_ingredients",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.17578936849811036
+    }
+  },
+  {
+    "text": "Let's cook it",
+    "intent": "start_cooking",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.44651789499506334
+    }
+  },
+  {
+    "text": "I've done",
+    "intent": "next_step",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.25032762918789175
+    }
+  },
+  {
+    "text": "I want to search another recipe",
+    "intent": "clear_search",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.301970679653612
+    }
+  },
+  {
+    "text": "definitely yes without a doubt",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3272961432205438
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "get_recipe_nutrition",
+      "confidence": 0.2932961846617117
+    }
+  },
+  {
+    "text": "Sweet",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "search_recipe",
+      "confidence": 0.6251701396557094
+    }
+  }
+]
