@@ -23,8 +23,18 @@ To test different nlu pipelines over the training nlu, create some configuration
 ```shell script
 make test-nlu
 ```
+In the `NLU_results` folder you will find the obtained results.
 
 To test different core policies over the test stories, create some configuration files in the `CORE_policies` folder and then type:
 ```shell script
 make test-core
 ```
+In the `CORE_results` folder you will find the obtained results.
+
+To test different nlu pipelines and core policies over the end-to-end test stories, create some configuration files in the `END2END_configs` folder and then type:
+```shell script
+make test-e2e
+```
+In the `END2END_results` folder you will find the obtained results.
+
+
