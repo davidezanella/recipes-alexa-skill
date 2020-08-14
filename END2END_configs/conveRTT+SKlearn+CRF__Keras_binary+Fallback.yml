@@ -1,0 +1,31 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline:
+  - name: ConveRTTokenizer
+  - name: ConveRTFeaturizer
+  - name: DucklingHTTPExtractor
+    url: "http://localhost:9900"
+    dimensions: ["ordinal"]
+  - name: EntitySynonymMapper
+  - name: SklearnIntentClassifier
+  - name: CRFEntityExtractor
+  - name: ResponseSelector
+    epochs: 100
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: KerasPolicy
+    featurizer:
+      - name: MaxHistoryTrackerFeaturizer
+        max_history: 5
+        state_featurizer:
+          - name: LabelTokenizerSingleStateFeaturizer
+  - name: MappingPolicy
+  - name: FormPolicy
+  - name: FallbackPolicy
+    nlu_threshold: 0.4
+    ambiguity_threshold: 0.1
+    core_threshold: 0.4
+    fallback_action_name: 'utter_rephrase'

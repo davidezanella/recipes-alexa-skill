@@ -1,0 +1,1000 @@
+{
+    "report": "                                                            precision    recall  f1-score   support\n\n                                                    affirm       1.00      0.25      0.40         4\n[without gluten]{\"entity\": \"gluten_free\", \"value\": \"true\"}       0.00      0.00      0.00         1\n                                                 next_page       1.00      1.00      1.00         1\n   [gluten free]{\"entity\": \"gluten_free\", \"value\": \"true\"}       0.00      0.00      0.00         1\n                                   [pastiera](search_text)       0.00      0.00      0.00         1\n                                         [53](max_minutes)       1.00      1.00      1.00         1\n                           [pineapple](search_ingredients)       0.00      0.00      0.00         1\n                                           get_recipe_info       1.00      1.00      1.00         2\n                             [carrots](search_ingredients)       1.00      1.00      1.00         1\n                                               utter_greet       0.00      0.00      0.00        18\n                                [meat](search_ingredients)       0.00      0.00      0.00         2\n                                       [175](max_calories)       1.00      1.00      1.00         1\n                                                     greet       1.00      1.00      1.00        18\n               [second]{\"entity\": \"ordinal\", \"value\": \"2\"}       1.00      1.00      1.00         2\n                                        [pie](search_text)       1.00      1.00      1.00         1\n                [first]{\"entity\": \"ordinal\", \"value\": \"1\"}       1.00      1.00      1.00         1\n                                   action_get_recipe_steps       0.00      0.00      0.00         2\n                                          get_recipe_steps       0.00      0.00      0.00         2\n                            [pineapple](avoid_ingredients)       0.00      0.00      0.00         3\n                                                utter_deny       1.00      1.00      1.00         1\n    [vegetarians]{\"entity\": \"vegetarian\", \"value\": \"true\"}       0.00      0.00      0.00         2\n                            [rosemary](search_ingredients)       0.00      0.00      0.00         4\n                                        [53](max_calories)       1.00      1.00      1.00         1\n                                    get_recipe_ingredients       0.50      1.00      0.67         2\n                                      get_recipe_nutrition       1.00      1.00      1.00         3\n                                                      deny       1.00      1.00      1.00         1\n                                       [120](max_calories)       1.00      1.00      1.00         1\n                                 action_form_search_recipe       1.00      1.00      1.00        19\n                                    action_get_recipe_info       0.50      1.00      0.67         2\n                                         [60](max_minutes)       1.00      1.00      1.00         1\n                              [carrots](avoid_ingredients)       1.00      1.00      1.00         2\n                                          action_next_step       1.00      0.88      0.93         8\n                                             action_listen       1.00      0.99      0.99        78\n              [vegans]{\"entity\": \"vegan\", \"value\": \"true\"}       0.00      0.00      0.00         2\n                                             start_cooking       1.00      1.00      1.00         5\n                                             search_recipe       1.00      1.00      1.00        18\n                                          action_next_page       1.00      1.00      1.00         1\n                [sixth]{\"entity\": \"ordinal\", \"value\": \"6\"}       1.00      1.00      1.00         1\n                                                   goodbye       1.00      1.00      1.00        18\n                                      action_choose_recipe       0.86      0.75      0.80         8\n                                      action_start_cooking       1.00      1.00      1.00         5\n                [third]{\"entity\": \"ordinal\", \"value\": \"3\"}       1.00      1.00      1.00         5\n                                         [80](max_minutes)       1.00      1.00      1.00         2\n                             [rosemary](avoid_ingredients)       0.00      0.00      0.00         1\n                                [pears](avoid_ingredients)       1.00      1.00      1.00         1\n                                                 next_step       0.57      1.00      0.73         4\n                                         [70](max_minutes)       1.00      1.00      1.00         1\n                             action_get_recipe_ingredients       0.33      0.50      0.40         2\n                                             utter_goodbye       1.00      1.00      1.00        18\n                               action_get_recipe_nutrition       1.00      0.67      0.80         3\n\n                                                 micro avg       0.96      0.83      0.89       283\n                                                 macro avg       0.70      0.70      0.69       283\n                                              weighted avg       0.84      0.83      0.83       283\n",
+    "precision": 0.8367827696449605,
+    "f1": 0.8259335633779952,
+    "accuracy": 0.8268551236749117,
+    "actions": [
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999539852142334
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999871253967285
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9913732409477234
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999690055847168
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998793601989746
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999994158744812
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9943870306015015
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999804496765137
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999072551727295
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999949932098389
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9953365921974182
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999823570251465
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999778270721436
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999983310699463
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9949097037315369
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999833106994629
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999648332595825
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999970197677612
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9944334626197815
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999788999557495
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999847412109375
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999996542930603
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998362064361572
+        },
+        {
+            "action": "action_get_recipe_info",
+            "predicted": "action_get_recipe_info",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9963171482086182
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999924898147583
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_get_recipe_steps",
+            "predicted": "action_get_recipe_ingredients",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.8834654688835144
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999922513961792
+        },
+        {
+            "action": "action_get_recipe_nutrition",
+            "predicted": "action_get_recipe_nutrition",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9655171632766724
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9997965693473816
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9980744123458862
+        },
+        {
+            "action": "action_start_cooking",
+            "predicted": "action_start_cooking",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9938856959342957
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999066591262817
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999823570251465
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999587535858154
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999909400939941
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9918183088302612
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999915361404419
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999819993972778
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999936819076538
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999028444290161
+        },
+        {
+            "action": "action_get_recipe_info",
+            "predicted": "action_get_recipe_info",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9987027645111084
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999808073043823
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999115467071533
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999347925186157
+        },
+        {
+            "action": "action_get_recipe_nutrition",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998767375946045
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_get_recipe_info",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.5285201668739319
+        },
+        {
+            "action": "action_next_page",
+            "predicted": "action_next_page",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9715269804000854
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9979901313781738
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9968840479850769
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999386191368103
+        },
+        {
+            "action": "action_start_cooking",
+            "predicted": "action_start_cooking",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.8489925265312195
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999600648880005
+        },
+        {
+            "action": "utter_deny",
+            "predicted": "utter_deny",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.8935155272483826
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999529123306274
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9614400863647461
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999901056289673
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999877214431763
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999985694885254
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9994195699691772
+        },
+        {
+            "action": "action_get_recipe_nutrition",
+            "predicted": "action_get_recipe_nutrition",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9746754765510559
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999879598617554
+        },
+        {
+            "action": "action_get_recipe_ingredients",
+            "predicted": "action_get_recipe_info",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.8284221887588501
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9995064735412598
+        },
+        {
+            "action": "action_start_cooking",
+            "predicted": "action_start_cooking",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9965170621871948
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9997329115867615
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999533891677856
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999662637710571
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999688863754272
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999904632568359
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9946519136428833
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999929666519165
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999778270721436
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999983310699463
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "action_choose_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9992693066596985
+        },
+        {
+            "action": "action_get_recipe_ingredients",
+            "predicted": "action_get_recipe_ingredients",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9641085267066956
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999573230743408
+        },
+        {
+            "action": "action_start_cooking",
+            "predicted": "action_start_cooking",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.996382474899292
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.99985671043396
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999239444732666
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999839067459106
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999123811721802
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999886751174927
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9959121942520142
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999983549118042
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999778270721436
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999983310699463
+        },
+        {
+            "action": "action_choose_recipe",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_get_recipe_steps",
+            "predicted": "action_get_recipe_ingredients",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9641085267066956
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999802112579346
+        },
+        {
+            "action": "action_start_cooking",
+            "predicted": "action_start_cooking",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9982345104217529
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998924732208252
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999271631240845
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999985933303833
+        },
+        {
+            "action": "action_next_step",
+            "predicted": "action_next_step",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999123811721802
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999886751174927
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9959121942520142
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.999983549118042
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9908376336097717
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999395608901978
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998745918273926
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999822378158569
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.991649866104126
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999794960021973
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998745918273926
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999822378158569
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.991649866104126
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999794960021973
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999186992645264
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999868869781494
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9912763833999634
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999794960021973
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999631643295288
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999921321868896
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9871604442596436
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999849796295166
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999573230743408
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999924898147583
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9907745718955994
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999841451644897
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999573230743408
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999924898147583
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9907745718955994
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999841451644897
+        },
+        {
+            "action": "utter_greet",
+            "predicted": "utter_rephrase",
+            "policy": "policy_3_FallbackPolicy",
+            "confidence": 1.0
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9998905658721924
+        },
+        {
+            "action": "action_form_search_recipe",
+            "predicted": "action_form_search_recipe",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999737739562988
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999836683273315
+        },
+        {
+            "action": "utter_goodbye",
+            "predicted": "utter_goodbye",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9829151630401611
+        },
+        {
+            "action": "action_listen",
+            "predicted": "action_listen",
+            "policy": "policy_0_KerasPolicy",
+            "confidence": 0.9999611377716064
+        }
+    ],
+    "in_training_data_fraction": 0.0,
+    "is_end_to_end_evaluation": true
+}

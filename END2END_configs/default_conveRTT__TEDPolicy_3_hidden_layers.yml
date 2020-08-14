@@ -1,0 +1,25 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline:
+  - name: ConveRTTokenizer
+  - name: ConveRTFeaturizer
+  - name: DucklingHTTPExtractor
+    url: "http://localhost:9900"
+    dimensions: ["ordinal"]
+  - name: EntitySynonymMapper
+  - name: EmbeddingIntentClassifier
+  - name: ResponseSelector
+    epochs: 100
+
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    hidden_layers_sizes:
+      dialogue: [256, 128, 64]
+      label: [256, 128, 64]
+  - name: MappingPolicy
+  - name: FormPolicy
