@@ -13,11 +13,9 @@ actions:
 - utter_rephrase
 entities:
 - avoid_ingredients
-- chosen_recipe
 - gluten_free
 - max_calories
 - max_minutes
-- number
 - ordinal
 - search_ingredients
 - search_text

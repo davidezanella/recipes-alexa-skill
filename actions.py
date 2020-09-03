@@ -48,13 +48,15 @@ class ActionFormSearchRecipe(FormAction):
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
+        """
+        Returns all the non empty slots otherwise they will not be mapped to entities.
+        """
         entities = []
         for ent in ActionFormSearchRecipe.entities:
             if map_entities(tracker, ent[1], ent[0]) is not None:
                 entities.append(ent[0])
         return entities
 
-    # TODO: add intents
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
             "page": self.from_entity(entity="page"),
@@ -134,7 +136,7 @@ class ActionFormSearchRecipe(FormAction):
             dispatcher.utter_message(txt)
 
         old_recipes = tracker.get_slot("recipes")
-        if old_recipes is None:
+        if old_recipes is None or params['page'] == 1:
             old_recipes = []
         recipes = old_recipes + list(map(lambda x: x.to_dict(), recipes))
         return [SlotSet("recipes", recipes)]
