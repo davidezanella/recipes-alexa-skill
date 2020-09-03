@@ -18,6 +18,19 @@ pip3 install -r requirements.txt
 - Install the `ngrok` program
 - Create an Alexa developer account
 
+## Start the Alexa skill
+- run ```rasa run actions```
+- in another shell run ```rasa run -m models --endpoints endpoints.yml```
+- in another shell run ```ngrok http 5005```
+- copy the resulting url of ngrok (like "https://123abc4d.ngrok.io")
+- go to the Alexa Developer Console
+- choose "Endpoint" from the "Skill Builder Checklist"
+- select HTTPS
+- as SSL certificate, choose "My development endpoint is a subdomain of a domain that has a wildcard certificate from a certificate authority"
+- copy the ngrok url concatenated with ```webhooks/alexa_assistant/webhook```
+- save your endpoints configuration
+- go to the "test" tab and start testing it by saying ```recipes assistant```
+
 ## Test different configurations
 To test different nlu pipelines over the training nlu, create some configuration files in the `NLU_pipelines` folder and then type:
 ```shell script
